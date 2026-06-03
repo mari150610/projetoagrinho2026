@@ -3,117 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte: Agricultura e Sustentabilidade</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Agro Forte & Sustentável</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="header-container">
             <div class="logo">
-                <span class="logo-icon">[+]</span> AGRO FORTE
+                <span class="logo-bold">AGRO</span><span class="logo-light">FORTE</span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#seguranca">Segurança</a></li>
-                    <li><a href="#solo">Saúde do Solo</a></li>
-                    <li><a href="#campo-cidade">Campo à Cidade</a></li>
-                    <li><a href="#impactos">Impactos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+            <nav class="nav-menu">
+                <a href="#inicio">Início</a>
+                <a href="#pilares">Pilares Científicos</a>
+                <a href="#sobre">O Manifesto</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="inicio" class="hero-section">
         <div class="hero-content">
-            <h1>Agricultura & Sustentabilidade</h1>
-            <p>Produtividade inteligente, preservação real e o fortalecimento do campo.</p>
-            <hr class="line-divider">
+            <span class="hero-badge">Produtividade com Consciência</span>
+            <h1>A evolução da terra passa pela ciência e pela segurança.</h1>
+            <p>Unindo a robustez da produção no campo à preservação ecossistêmica: o verdadeiro agro forte é aquele que protege sua base.</p>
+            <a href="#pilares" class="btn-primary">Explorar Pesquisas</a>
         </div>
     </section>
 
-    <main class="container">
+    <section id="pilares" class="pillars-section">
+        <div class="section-title-wrapper">
+            <h2>Pilares da Produtividade Sustentável</h2>
+            <p>Dados, análises e soluções que conectam o campo ao futuro do planeta.</p>
+        </div>
 
-        <section id="seguranca" class="card-section">
-            <div class="section-title">
-                <h2>// Sistemas de Segurança para Agricultores</h2>
+        <div class="tabs-container">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="solo">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8z"/></svg>
+                    Saúde do Solo
+                </button>
+                <button class="tab-btn" data-tab="seguranca">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                    Segurança do Agricultor
+                </button>
+                <button class="tab-btn" data-tab="rastreabilidade">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    Campo à Cidade
+                </button>
+                <button class="tab-btn" data-tab="impactos">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+                    Impactos da Natureza
+                </button>
             </div>
-            <div class="content-box border-red">
-                <p>A segurança no manejo agrícola envolve desde a proteção física do trabalhador até a blindagem digital de dados operacionais. Com a ascensão da agricultura de precisão, sistemas de monitoramento de maquinários e o uso correto de Equipamentos de Proteção Individual (EPIs) mitigam riscos ocupacionais, garantindo uma produção contínua e sem sinistros.</p>
-                <div class="data-fact">
-                    <strong>Fato de Pesquisa:</strong> A automação aliada ao treinamento reduz em até 40% os incidentes severos no manuseio de maquinário pesado.
+
+            <div class="tabs-content">
+                <div class="tab-pane active" id="solo">
+                    <div class="pane-grid">
+                        <div class="pane-text">
+                            <span class="pane-tag tag-verde">Microbiologia Ativa</span>
+                            <h3>A inteligência invisível sob nossos pés</h3>
+                            <p>O manejo sustentável moderno foca na regeneração da microbiota do solo. Longe de ser apenas um suporte físico, a terra é um organismo vivo. Pesquisas recentes apontam que a rotação de culturas aliada ao plantio direto preserva a umidade e fixa nitrogênio de forma natural, reduzindo a dependência de insumos sintéticos em até 35%.</p>
+                            <blockquote>"Solos saudáveis sequestram mais carbono, mitigando os efeitos das mudanças climáticas globais."</blockquote>
+                        </div>
+                        <div class="pane-highlight color-verde">
+                            <h4>Indicador Crítico</h4>
+                            <p class="stat-number">40%</p>
+                            <p>Mais retenção de água em solos com manejo de cobertura orgânica contínua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="seguranca">
+                    <div class="pane-grid">
+                        <div class="pane-text">
+                            <span class="pane-tag tag-amarelo">Protocolos de Vida</span>
+                            <h3>Proteção jurídica, física e digital no campo</h3>
+                            <p>A segurança do trabalhador rural transita pelo uso correto de Equipamentos de Proteção Individual (EPIs), mas vai além: envolve a blindagem jurídica e a segurança cibernética em fazendas automatizadas. Proteger quem produz contra acidentes de trabalho e contra vulnerabilidades de dados de maquinários é essencial para a manutenção da soberania alimentar.</p>
+                        </div>
+                        <div class="pane-highlight color-amarelo">
+                            <h4>Foco Técnico</h4>
+                            <p class="stat-number">Zero</p>
+                            <p>É a meta aceitável de acidentes com a implementação de treinamentos contínuos de NR-31.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="rastreabilidade">
+                    <div class="pane-grid">
+                        <div class="pane-text">
+                            <span class="pane-tag tag-azul">Conexão Segura</span>
+                            <h3>Transparência radical da colheita à mesa</h3>
+                            <p>A segurança do campo à cidade baseia-se na rastreabilidade. O consumidor moderno exige saber a origem do que consome. Através de sistemas integrados, é possível monitorar o histórico fitossanitário do alimento, garantindo segurança alimentar para a população urbana e valorização cambial para o produtor honesto.</p>
+                        </div>
+                        <div class="pane-highlight color-azul">
+                            <h4>Transparência</h4>
+                            <p class="stat-number">100%</p>
+                            <p>De rastreabilidade digital impede o desperdício logístico nas cadeias de suprimento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="impactos">
+                    <div class="pane-grid">
+                        <div class="pane-text">
+                            <span class="pane-tag tag-vermelho">Resiliência Climática</span>
+                            <h3>Decifrando as forças climáticas extremas</h3>
+                            <p>Os impactos da natureza (como secas prolongadas e chuvas torrenciais) não podem ser evitados, mas seus danos podem ser calculados e minimizados. A agricultura de precisão utiliza inteligência preditiva para mapear microclimas, ajustando calendários de semeadura e evitando a perda massiva de safras.</p>
+                        </div>
+                        <div class="pane-highlight color-vermelho">
+                            <h4>Alerta Global</h4>
+                            <p class="stat-number">-25%</p>
+                            <p>De quebra de safra estimada quando aplicados modelos de previsão meteorológica IA.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="solo" class="card-section">
-            <div class="section-title">
-                <h2>// Saúde do Solo e Produtividade</h2>
-            </div>
-            <div class="content-box border-green">
-                <p>O solo é um organismo vivo. Práticas como o plantio direto, rotação de culturas e a aplicação de bioinsumos preservam a microbiota da terra, evitam a erosão e aumentam a retenção de água. Solos biologicamente ativos demandam menos fertilizantes sintéticos, reduzindo custos e pegadas de carbono.</p>
-                <div class="data-fact">
-                    <strong>Fato de Pesquisa:</strong> Solos manejados de forma sustentável apresentam um incremento de até 25% na resiliência hídrica durante períodos de estiagem.
+    <section id="sobre" class="manifesto-section">
+        <div class="manifesto-container">
+            <h2>O Manifesto por um Agro Forte</h2>
+            <p class="lead">Não existe produtividade real que destrua o próprio amanhã. O verdadeiro "agro forte" harmoniza a engenharia genética, a tecnologia de ponta e o respeito aos ciclos da biosfera.</p>
+            <p>Propomos uma quebra de paradigma: o campo não deve lutar contra a natureza, mas sim decodificar seus padrões para produzir em simbiose com ela. A segurança do planeta começa no sulco da terra cultivada.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Alie-se à Causa</h2>
+                <p>Tem interesse em acessar nossos relatórios completos de pesquisa ou implementar estes sistemas de segurança na sua propriedade? Entre em contato conosco.</p>
+                <div class="info-item">
+                    <strong>Endereço de Pesquisa:</strong> Centro de Desenvolvimento Agro-Sustentável, Bloco C
                 </div>
-            </section>
-
-        <section id="campo-cidade" class="card-section">
-            <div class="section-title">
-                <h2>// Segurança Alimentar: Do Campo à Cidade</h2>
-            </div>
-            <div class="content-box border-blue">
-                <p>A rastreabilidade garante que o alimento consumido nos grandes centros urbanos tenha sua origem verificada. Sistemas de gestão integrados monitoram desde a semente até a logística de transporte, assegurando o cumprimento de normas sanitárias rígidas e fortalecendo a confiança do consumidor final na cadeia produtiva nacional.</p>
-                <div class="data-fact">
-                    <strong>Fato de Pesquisa:</strong> O monitoramento de temperatura e rotas diminui o desperdício de alimentos perecíveis em quase um terço durante o trajeto logístico.
-                </div>
-            </div>
-        </section>
-
-        <section id="impactos" class="card-section">
-            <div class="section-title">
-                <h2>// Impactos da Natureza e Resiliência Climática</h2>
-            </div>
-            <div class="content-box border-yellow">
-                <p>As mudanças climáticas impõem novos desafios ao agronegócio. O desenvolvimento de cultivares adaptadas a estresses térmicos e a utilização de dados meteorológicos avançados permitem prever geadas, secas ou excesso de chuvas. Adaptar-se à natureza tornou-se a métrica principal para a estabilidade econômica no campo.</p>
-                <div class="data-fact">
-                    <strong>Fato de Pesquisa:</strong> A modelagem climática preditiva ajuda a otimizar a janela de semeadura, mitigando quebras de safra em anos sob influência de fenômenos como El Niño.
+                <div class="info-item">
+                    <strong>E-mail:</strong> contato@agrofortesustentavel.org
                 </div>
             </div>
-        </section>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso (Simulação).');">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required placeholder="Ex: Roberto Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" required placeholder="Ex: roberto@fazenda.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem ou Solicitação de Dados</label>
+                        <textarea id="message" rows="5" required placeholder="Como podemos ajudar no seu ecossistema?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        <section id="contato" class="contact-section">
-            <h2>== Entre em Contato ==</h2>
-            <p>Tem dúvidas sobre práticas sustentáveis ou quer colaborar conosco? Envie uma mensagem.</p>
-            
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-            <div id="formFeedback" class="hidden"></div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>AGRO FORTE | Agricultura e Sustentabilidade © 2026</p>
-            <p class="footer-divider">-----------------------------------------</p>
-            <p>Contatos Acadêmicos e Profissionais: info@agroforte.org | Tel: (00) 3322-1100</p>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 AgroForte Sustentável. Todos os direitos reservados.</p>
+            <p class="credit">Desenvolvido e Idealizado por: <span class="author-name">Maria Clara Batista Ferreira</span></p>
         </div>
     </footer>
 
