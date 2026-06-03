@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById("agroContactForm");
-    const formFeedback = document.getElementById("formFeedback");
+    
+    const contactForm = document.getElementById("contactForm");
+    const feedback = document.getElementById("formFeedback");
 
     if (contactForm) {
         contactForm.addEventListener("submit", function(event) {
-            // Impede o envio tradicional do formulário
+            // Evita o recarregamento padrão da página ao enviar formulário
             event.preventDefault();
 
             // Captura dos dados inseridos
@@ -12,32 +13,43 @@ document.addEventListener("DOMContentLoaded", function() {
             const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
 
-            // Validação simples (garantia extra)
-            if (name === "" || email === "" || message === "") {
-                showFeedback("⚠️ Por favor, preencha todos os campos obrigatórios.", "error");
-                return;
-            }
+            // Validação simples
+            if (name && email && message) {
+                // Remove classe oculta e aplica estilo de sucesso
+                feedback.classList.remove("hidden");
+                feedback.className = "success-msg";
+                feedback.innerText = `Obrigado pelo contato, ${name}! Sua mensagem foi simulada como enviada com sucesso.`;
 
-            // Simulação de envio com sucesso
-            showFeedback(`[✓] Obrigado, ${name}! Seus dados foram enviados de forma segura. Nossa equipe entrará em contato via: ${email}.`, "success");
-            
-            // Reseta o formulário
-            contactForm.reset();
+                // Limpa os campos do formulário
+                contactForm.reset();
+
+                // Apaga a mensagem de sucesso após 5 segundos
+                setTimeout(() => {
+                    feedback.classList.add("hidden");
+                }, 5000);
+            }
         });
     }
 
-    function showFeedback(text, type) {
-        formFeedback.textContent = text;
-        formFeedback.className = "form-feedback"; // Reseta classes
-        
-        if (type === "success") {
-            formFeedback.classList.add("success");
-        } else {
-            formFeedback.style.backgroundColor = "#f9ebeb";
-            formFeedback.style.color = "#a63a50";
-            formFeedback.style.border = "1px solid #a63a50";
-        }
-        
-        formFeedback.classList.remove("hidden");
-    }
+    // Efeito sutil ao rolar a página: destaca o link do menu ativo
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(a => {
+            a.style.color = "#ffffff"; // Reseta cor padrão
+            if (a.getAttribute("href").includes(current)) {
+                a.style.color = "#d4a373"; // Aplica a cor amarela fosca no link ativo
+            }
+        });
+    });
 });
