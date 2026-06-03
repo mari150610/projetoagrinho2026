@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte & Sustentável</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                AGRO<span>FORTE</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#saude-solo">Saúde do Solo</a>
+                <a href="#seguranca-trabalhador">Segurança</a>
+                <a href="#campo-cidade">Campo à Cidade</a>
+                <a href="#impactos-natureza">Impactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agricultura & Sustentabilidade</h1>
+            <p>Produtividade inteligente, preservação real e a força do campo que move o futuro.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="O que você deseja pesquisar hoje? (Ex: Solo, EPI...)">
+                <button onclick="buscarConteudo()">Pesquisar</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        
+        <section class="interactive-section">
+            <h2>Simulador de Diagnóstico Sustentável</h2>
+            <p>Selecione o foco atual da sua propriedade para receber uma diretriz rápida de sustentabilidade:</p>
+            <div class="interactive-buttons">
+                <button class="btn-interact" onclick="mostrarDiretriz('solo')">Análise de Solo</button>
+                <button class="btn-interact" onclick="mostrarDiretriz('seguranca')">Proteção do Trabalhador</button>
+                <button class="btn-interact" onclick="mostrarDiretriz('logistica')">Logística Segura</button>
+            </div>
+            <div id="interactive-result" class="interactive-result-box">
+                Clique em um dos botões acima para gerar a recomendação técnica.
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="grid-content">
+            
+            <article id="saude-solo" class="card-info border-green">
+                <div class="card-tag tag-green">Manejo</div>
+                <h3>Saúde do Solo e Nutrição Direcionada</h3>
+                <p>A produtividade a longo prazo depende da biologia ativa do solo. A rotação de culturas, o plantio direto e a reposição orgânica reduzem a dependência de insumos sintéticos e evitam a erosão severa.</p>
+                <span class="decor-arrow">-&gt;</span>
+            </article>
+
+            <article id="seguranca-trabalhador" class="card-info border-red">
+                <div class="card-tag tag-red">Segurança</div>
+                <h3>Sistemas de Segurança do Trabalhador</h3>
+                <p>Proteção no manejo de defensivos, treinamentos rigorosos para operação de maquinários pesados e o uso correto de EPIs mitigam riscos operacionais no dia a dia da lavoura.</p>
+                <span class="decor-arrow">-&gt;</span>
+            </article>
+
+            <article id="campo-cidade" class="card-info border-blue">
+                <div class="card-tag tag-blue">Logística</div>
+                <h3>Rastreabilidade: Do Campo à Cidade</h3>
+                <p>Garantir que o alimento chegue seguro à mesa urbana exige controle rigoroso de armazenagem e transporte livre de contaminações, agregando valor e confiabilidade ao produtor.</p>
+                <span class="decor-arrow">-&gt;</span>
+            </article>
+
+            <article id="impactos-natureza" class="card-info border-yellow">
+                <div class="card-tag tag-yellow">Clima</div>
+                <h3>Mitigação de Impactos da Natureza</h3>
+                <p>Monitoramento climático preventivo e adoção de bacias de retenção de água preparam o ecossistema agrícola para enfrentar secas prolongadas e excesso de chuvas induzidos pelas mudanças climáticas.</p>
+                <span class="decor-arrow">-&gt;</span>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Agro Forte</h4>
+                <p>Levando tecnologia e consciência ambiental do plantio à colheita.</p>
+            </div>
+            <div id="contatos" class="footer-section">
+                <h4>Contato Técnico</h4>
+                <p>Telefone: (11) 4004-9000</p>
+                <p>E-mail: contato@agroforte.sustentavel.br</p>
+            </div>
+            <div class="footer-section">
+                <h4>Endereço</h4>
+                <p>Av. das Nações Verdes, 1050</p>
+                <p>Centro Tecnológico Canavial - SP</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AgroForte Sustentável. Todos os direitos reservados. [ Desenvolvido sem elementos gráficos externos ]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

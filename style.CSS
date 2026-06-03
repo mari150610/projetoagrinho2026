@@ -1,0 +1,304 @@
+/* --- CONFIGURAÇÕES GERAIS E PALETA DE CORES --- */
+:root {
+    --bg-color: #fcfbf7;
+    --text-dark: #2c332e;
+    --text-light: #555e57;
+    
+    /* Paleta balanceada (fechada / sóbria) */
+    --primary-green: #2e5339;
+    --accent-yellow: #bfa15f;
+    --accent-blue: #2a4b5c;
+    --accent-red: #8c3b31;
+    
+    --border-light: #e0ded9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--primary-green);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-yellow);
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-green);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background-color: #1b261f;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-yellow);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f7f5f0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #c9ceca;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- BARRA DE PESQUISA --- */
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #4a544e;
+    background: #ffffff;
+    padding: 5px;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-container button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #1f3a27;
+}
+
+/* --- CONTEÚDO E LAYOUT --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-light);
+    margin: 50px 0;
+}
+
+/* --- SESSÃO INTERATIVA --- */
+.interactive-section {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    padding: 40px;
+    text-align: center;
+}
+
+.interactive-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.interactive-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.btn-interact {
+    background: transparent;
+    border: 2px solid var(--text-dark);
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-interact:hover {
+    background: var(--text-dark);
+    color: #ffffff;
+}
+
+.interactive-result-box {
+    background: #f4f2ed;
+    padding: 25px;
+    border-left: 4px solid var(--accent-yellow);
+    font-style: italic;
+    min-height: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- CARDS GRID --- */
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-info {
+    background: #ffffff;
+    padding: 30px;
+    border-top: 5px solid var(--text-dark);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card-info:hover {
+    transform: translateY(-5px);
+}
+
+.card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.card-info p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.decor-arrow {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+/* CORES ESPECÍFICAS DOS CARDS */
+.border-green { border-top-color: var(--primary-green); }
+.tag-green { background: #e3ece6; color: var(--primary-green); }
+
+.border-red { border-top-color: var(--accent-red); }
+.tag-red { background: #f7e9e7; color: var(--accent-red); }
+
+.border-blue { border-top-color: var(--accent-blue); }
+.tag-blue { background: #e3ebf0; color: var(--accent-blue); }
+
+.border-yellow { border-top-color: var(--accent-yellow); }
+.tag-yellow { background: #fcf5e3; color: var(--accent-yellow); }
+
+/* --- RODAPÉ --- */
+.main-footer {
+    background: #222824;
+    color: #d1d6d2;
+    padding: 60px 20px 20px 20px;
+    margin-top: 100px;
+    border-top: 1px solid #333b36;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #333b36;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #838e86;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .nav-menu a { margin: 0 10px; }
+    .hero h1 { font-size: 2.2rem; }
+}
