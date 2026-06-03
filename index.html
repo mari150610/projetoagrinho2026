@@ -3,108 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte & Sustentável</title>
+    <title>AgroForte | Agricultura e Sustentabilidade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="site-header">
         <div class="header-container">
             <div class="logo">
-                AGRO<span>FORTE</span>
+                <span class="logo-symbol">[≡]</span> AGRO<span class="highlight">FORTE</span>
             </div>
             <nav class="nav-menu">
                 <a href="#saude-solo">Saúde do Solo</a>
-                <a href="#seguranca-trabalhador">Segurança</a>
+                <a href="#seguranca-rural">Segurança</a>
                 <a href="#campo-cidade">Campo à Cidade</a>
-                <a href="#impactos-natureza">Impactos</a>
+                <a href="#impactos">Impactos</a>
+                <a href="#contato" class="btn-nav">Contato</a>
             </nav>
         </div>
+        <div class="header-divider">━━━━━━━ ▲ ━━━━━━━</div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Agricultura & Sustentabilidade</h1>
-            <p>Produtividade inteligente, preservação real e a força do campo que move o futuro.</p>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="O que você deseja pesquisar hoje? (Ex: Solo, EPI...)">
-                <button onclick="buscarConteudo()">Pesquisar</button>
-            </div>
+            <h1>AGRICULTURA & SUSTENTABILIDADE</h1>
+            <p class="subtitle">Produtividade no agro forte, consciente e seguro.</p>
+            <div class="accent-line">━━━━━━</div>
         </div>
     </section>
 
-    <main class="content-wrapper">
-        
-        <section class="interactive-section">
-            <h2>Simulador de Diagnóstico Sustentável</h2>
-            <p>Selecione o foco atual da sua propriedade para receber uma diretriz rápida de sustentabilidade:</p>
-            <div class="interactive-buttons">
-                <button class="btn-interact" onclick="mostrarDiretriz('solo')">Análise de Solo</button>
-                <button class="btn-interact" onclick="mostrarDiretriz('seguranca')">Proteção do Trabalhador</button>
-                <button class="btn-interact" onclick="mostrarDiretriz('logistica')">Logística Segura</button>
+    <main class="main-container">
+
+        <section id="saude-solo" class="content-section">
+            <div class="section-title">
+                <span>[ 01 ]</span>
+                <h2>Preservação & Saúde do Solo</h2>
             </div>
-            <div id="interactive-result" class="interactive-result-box">
-                Clique em um dos botões acima para gerar a recomendação técnica.
+            <div class="grid-2">
+                <div class="card card-green">
+                    <h3>Manejo Regenerativo</h3>
+                    <p>A base de um agro forte começa na terra. Práticas de plantio direto, rotação de culturas e adubação verde garantem que o solo mantenha seus microrganismos ativos, retendo mais água e nutrientes.</p>
+                    <span class="card-footer">+++ fertilidade +++</span>
+                </div>
+                <div class="card card-yellow">
+                    <h3>Análise de Dados</h3>
+                    <p>Monitoramento constante via sensores de umidade e PH. A tecnologia aplicada evita a superdosagem de insumos, protegendo o lençol freático e otimizando os custos de produção.</p>
+                    <span class="card-footer">>>> precisão >>></span>
+                </div>
             </div>
         </section>
 
-        <hr class="section-divider">
+        <hr class="section-separator">
 
-        <section class="grid-content">
-            
-            <article id="saude-solo" class="card-info border-green">
-                <div class="card-tag tag-green">Manejo</div>
-                <h3>Saúde do Solo e Nutrição Direcionada</h3>
-                <p>A produtividade a longo prazo depende da biologia ativa do solo. A rotação de culturas, o plantio direto e a reposição orgânica reduzem a dependência de insumos sintéticos e evitam a erosão severa.</p>
-                <span class="decor-arrow">-&gt;</span>
-            </article>
-
-            <article id="seguranca-trabalhador" class="card-info border-red">
-                <div class="card-tag tag-red">Segurança</div>
-                <h3>Sistemas de Segurança do Trabalhador</h3>
-                <p>Proteção no manejo de defensivos, treinamentos rigorosos para operação de maquinários pesados e o uso correto de EPIs mitigam riscos operacionais no dia a dia da lavoura.</p>
-                <span class="decor-arrow">-&gt;</span>
-            </article>
-
-            <article id="campo-cidade" class="card-info border-blue">
-                <div class="card-tag tag-blue">Logística</div>
-                <h3>Rastreabilidade: Do Campo à Cidade</h3>
-                <p>Garantir que o alimento chegue seguro à mesa urbana exige controle rigoroso de armazenagem e transporte livre de contaminações, agregando valor e confiabilidade ao produtor.</p>
-                <span class="decor-arrow">-&gt;</span>
-            </article>
-
-            <article id="impactos-natureza" class="card-info border-yellow">
-                <div class="card-tag tag-yellow">Clima</div>
-                <h3>Mitigação de Impactos da Natureza</h3>
-                <p>Monitoramento climático preventivo e adoção de bacias de retenção de água preparam o ecossistema agrícola para enfrentar secas prolongadas e excesso de chuvas induzidos pelas mudanças climáticas.</p>
-                <span class="decor-arrow">-&gt;</span>
-            </article>
-
+        <section id="seguranca-rural" class="content-section">
+            <div class="section-title">
+                <span>[ 02 ]</span>
+                <h2>Segurança no Trabalho Rural</h2>
+            </div>
+            <div class="banner-alert">
+                <div class="alert-icon">[!]</div>
+                <div class="alert-text">
+                    <h3>Sistemas de Proteção e Prevenção</h3>
+                    <p>A segurança do trabalhador é inegociável. Desenvolvemos protocolos rigorosos para o manuseio de maquinários pesados, uso correto de EPIs e treinamentos contínuos para mitigar riscos operacionais no campo.</p>
+                </div>
+            </div>
         </section>
+
+        <hr class="section-separator">
+
+        <section id="campo-cidade" class="content-section">
+            <div class="section-title">
+                <span>[ 03 ]</span>
+                <h2>Rastreabilidade: Do Campo à Cidade</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time-marker">1 . Produção</div>
+                    <p>Cultivo monitorado com baixa emissão de carbono.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-marker">2 . Logística</div>
+                    <p>Transporte inteligente com menor desperdício de alimentos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-marker">3 . Consumo</div>
+                    <p>Alimento seguro, nutritivo e com origem 100% certificada.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section id="impactos" class="content-section">
+            <div class="section-title">
+                <span>[ 04 ]</span>
+                <h2>Impactos Climáticos e Resiliência</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card card-blue">
+                    <h3>Gestão Hídrica</h3>
+                    <p>Sistemas de irrigação por gotejamento que reduzem o consumo de água em até 40%.</p>
+                </div>
+                <div class="card card-blue">
+                    <h3>Crédito de Carbono</h3>
+                    <p>Florestas nativas preservadas gerando ativos financeiros para a propriedade.</p>
+                </div>
+                <div class="card card-blue">
+                    <h3>Previsibilidade</h3>
+                    <p>Modelagem climática avançada para antecipar períodos de seca ou excesso de chuvas.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section id="contato" class="content-section section-contact">
+            <div class="section-title">
+                <span>[ 05 ]</span>
+                <h2>Fale com Especialistas</h2>
+            </div>
+            <div class="contact-wrapper">
+                <form id="agroContactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome / Propriedade</label>
+                        <input type="text" id="name" required placeholder="Ex: Fazenda Boa Vista">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail de Contato</label>
+                        <input type="email" id="email" required placeholder="Ex: contato@fazenda.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem / Dúvida</label>
+                        <textarea id="message" rows="4" required placeholder="Como podemos ajudar na sustentabilidade do seu negócio?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensagem  ──></button>
+                </form>
+                <div id="formFeedback" class="form-feedback hidden"></div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="main-footer">
+    <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-section">
-                <h4>Agro Forte</h4>
-                <p>Levando tecnologia e consciência ambiental do plantio à colheita.</p>
+            <div class="footer-info">
+                <h4>AGROFORTE</h4>
+                <p>Produtividade, Segurança e Consciência Ambiental.</p>
             </div>
-            <div id="contatos" class="footer-section">
-                <h4>Contato Técnico</h4>
-                <p>Telefone: (11) 4004-9000</p>
-                <p>E-mail: contato@agroforte.sustentavel.br</p>
-            </div>
-            <div class="footer-section">
-                <h4>Endereço</h4>
-                <p>Av. das Nações Verdes, 1050</p>
-                <p>Centro Tecnológico Canavial - SP</p>
+            <div class="footer-contacts">
+                <p>T E L | (11) 4003-0000</p>
+                <p>M A I L | contato@agroforte.com.br</p>
+                <p>L O C | Av. do Desenvolvimento, 1500 - Setor Agro</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 AgroForte Sustentável. Todos os direitos reservados. [ Desenvolvido sem elementos gráficos externos ]</p>
+            <p>────────────────────────────────────────────────────────────</p>
+            <p>&copy; 2026 AgroForte Sustentável. Desenvolvido com foco em performance e ecologia.</p>
         </div>
     </footer>
 
