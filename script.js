@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // Executa uma vez no início para revelar as seções visíveis no topo
+    // Execução inicial preventiva
     revealOnScroll();
     window.addEventListener('scroll', revealOnScroll);
 
@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         secoesPagina.forEach(secao => {
             const topoSecao = secao.offsetTop;
-            const alturaSecao = secao.clientHeight;
-            // Define o ponto de ativação no meio da janela do navegador
-            if (window.scrollY >= (topoSecao - 300)) {
+            // Define ativação baseada no scroll médio superior da tela
+            if (window.scrollY >= (topoSecao - 320)) {
                 secaoAtivaId = secao.getAttribute('id');
             }
         });
@@ -46,21 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', destacarMenu);
 
 
-    // 3. CARDS EXPANSÍVEIS (ACCORDION) NA SEÇÃO "COMO PARTICIPAR"
+    // 3. PAINÉIS EXPANSÍVEIS (ACCORDION) NA SEÇÃO "COMO PARTICIPAR"
     const botoesAcordeon = document.querySelectorAll('.accordion-header');
 
     botoesAcordeon.forEach(botao => {
         botao.addEventListener('click', function() {
             const itemAtual = this.parentElement;
             
-            // Fecha outros painéis que possam estar abertos (apenas um aberto por vez)
+            // Fecha outros blocos abertos para manter a interface organizada
             document.querySelectorAll('.accordion-item').forEach(item => {
                 if (item !== itemAtual) {
                     item.classList.remove('active');
                 }
             });
 
-            // Alterna o estado do item clicado
+            // Altera o estado do painel selecionado
             itemAtual.classList.toggle('active');
         });
     });
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // 5. ROLAGEM SUAVE EXPLICITA PARA COMPATIBILIDADE DE NAVEGADORES
+    // 5. ROLAGEM SUAVE EXPLICITA PARA LINKS DE NAVEGAÇÃO INTERNA
     const linksInternos = document.querySelectorAll('.nav-item a, #btn-explorar');
 
     linksInternos.forEach(link => {
