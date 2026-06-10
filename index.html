@@ -3,90 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Futuro — Portal Agroambiental</title>
+    <title>Cosmos & Ciência | Portal de Divulgação Científica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M50 15C30 35 30 65 50 85C70 65 70 35 50 15Z%22 fill=%22%231b4332%22/></svg>">
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="logo-area">
-            <div class="leaf-logo"></div>
-            <h1 class="sidebar-brand">Raízes do Futuro</h1>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="sidebar-navigation">
+        <span class="hamburger"></span>
+    </button>
+
+    <aside class="sidebar" id="sidebar-navigation" aria-hidden="true">
+        <div class="sidebar-brand">
+            <h2>Cosmos<span>.</span></h2>
         </div>
-        <nav class="nav-menu">
-            <a href="#inicio" class="menu-item marker-green active">Início</a>
-            <a href="#agro-brasil" class="menu-item marker-blue">Agro no Brasil</a>
-            <a href="#desafios" class="menu-item marker-yellow">Desafios</a>
-            <a href="#solucoes" class="menu-item marker-green">Soluções</a>
-            <a href="#biodiversidade" class="menu-item marker-blue">Biodiversidade</a>
-            <a href="#projetos" class="menu-item marker-yellow">Projetos</a>
-            <a href="#participar" class="menu-item marker-green">Como Participar</a>
-            <a href="#futuro" class="menu-item marker-blue">Futuro</a>
-            <a href="#referencias" class="menu-item marker-yellow">Referências</a>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#artigos">Artigos Recentes</a></li>
+                <li><a href="#exploracao">Exploração Espacial</a></li>
+                <li><a href="#sobre">Sobre o Portal</a></li>
+            </ul>
         </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 Cosmos & Ciência.</p>
+        </div>
     </aside>
 
-    <main class="main-wrapper">
+    <main class="main-content">
         
-        <section id="inicio" class="hero-section target-section">
-            <div class="hero-content">
-                <header class="hero-header">
-                    <span class="portal-category">Ciência • Sustentabilidade • Futuro</span>
-                    <h2 class="main-title">Produzir mais. <br><span class="italic-text">Preservar melhor.</span></h2>
-                    <p class="main-subtitle">O desafio de alimentar uma nação sem deixar a natureza para trás.</p>
-                </header>
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <span class="category-tag">Astrofísica Moderna</span>
+                <h1 class="main-title">O horizonte de eventos e o tecido do espaço-tempo</h1>
+                <p class="lead-text">
+                    Novas simulações computacionais avançadas revelam detalhes inéditos sobre a dinâmica de fluidos magnéticos nas bordas de buracos negros supermassivos, desafiando conceitos anteriores da relatividade geral.
+                </p>
+            </div>
+        </section>
+
+        <section id="artigos" class="articles-section">
+            <div class="container">
+                <h2 class="section-title">Pesquisas em Destaque</h2>
                 
-                <div class="intro-box">
-                    <p class="text-block lead-text">
-                        O Brasil ocupa uma posição de liderança incontestável no cenário global de abastecimento. Contudo, essa enorme capacidade produtiva coincide com a guarda da maior biodiversidade do planeta.
-                    </p>
-                    <p class="text-block">
-                        Este portal propõe uma imersão técnica sobre como a ciência agrícola e a responsabilidade ecológica se unem para traçar o futuro sustentável da produção nacional. O grande dilema contemporâneo não reside em escolher entre o desenvolvimento econômico e a salvaguarda de nossas florestas, mas sim em consolidar um modelo onde ambos coexistam.
-                    </p>
-                    <div class="header-actions">
-                        <a href="#agro-brasil" class="btn-primary">Explorar Pesquisa</a>
-                        <a href="#referencias" class="btn-secondary">Fontes Oficiais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="organic-shape"></div>
-        </section>
+                <div class="articles-grid">
+                    <article class="card">
+                        <div class="card-image-placeholder" aria-label="Ilustração conceitual de mecânica quântica"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Física Quântica</span>
+                            <h3 class="card-title">Emaranhamento quântico atinge novas distâncias em vácuo</h3>
+                            <p class="card-excerpt">
+                                Cientistas conseguiram estabilizar estados emaranhados por mais de mil quilômetros, abrindo portas para a internet quântica global.
+                            </p>
+                            <a href="#" class="read-more">Ler artigo completo →</a>
+                        </div>
+                    </article>
 
-        <section id="agro-brasil" class="content-section target-section">
-            <h3 class="section-title">O Agronegócio na Realidade Brasileira</h3>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Segurança Alimentar</h4>
-                    <p>O Brasil alimenta diretamente mais de 800 milhões de pessoas ao redor do globo, exportando para centenas de mercados internacionais.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Motor Econômico</h4>
-                    <p>O setor corresponde a quase 25% do PIB nacional, promovendo a interiorização do desenvolvimento e infraestrutura regional.</p>
-                </div>
-                <div class="info-card">
-                    <h4>Geração de Emprego</h4>
-                    <p>Responsável por empregar cerca de um terço da força de trabalho nacional, desde a pesquisa científica até a logística.</p>
-                </div>
-            </div>
-        </section>
+                    <article class="card">
+                        <div class="card-image-placeholder" aria-label="Ilustração de filamentos de DNA"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Biotecnologia</span>
+                            <h3 class="card-title">Edição genética com CRISPR corrige mutações raras em tecidos vivos</h3>
+                            <p class="card-excerpt">
+                                Terapias inovadoras baseadas em RNA demonstraram eficácia sem precedentes na reversão de patologias genéticas complexas em modelos clínicos.
+                            </p>
+                            <a href="#" class="read-more">Ler artigo completo →</a>
+                        </div>
+                    </article>
 
-        <section id="referencias" class="content-section target-section">
-            <h3 class="section-title">Referências e Fontes</h3>
-            <div class="ref-list">
-                <div class="ref-item"><strong>Embrapa:</strong> Relatórios de Agricultura de Baixo Carbono (ABC+).</div>
-                <div class="ref-item"><strong>IBGE:</strong> Censo Agropecuário Brasileiro.</div>
-                <div class="ref-item"><strong>MMA:</strong> Dados sobre conservação de Biomas.</div>
+                    <article class="card">
+                        <div class="card-image-placeholder" aria-label="Representação do núcleo terrestre"></div>
+                        <div class="card-content">
+                            <span class="card-tag">Geociências</span>
+                            <h3 class="card-title">Anomalias no núcleo interno da Terra alteram rotação sutilmente</h3>
+                            <p class="card-excerpt">
+                                Estudos sismológicos indicam desaceleração periódica na velocidade do núcleo fluído, influenciando o campo geomagnético do planeta.
+                            </p>
+                            <a href="#" class="read-more">Ler artigo completo →</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <footer class="site-footer">
-            <p><strong>Projeto desenvolvido por Maria Clara Batista Ferreira.</strong></p>
-            <p>© 2026 — Raízes do Futuro. Todos os direitos reservados.</p>
-        </footer>
+        <section id="exploracao" class="insight-section">
+            <div class="container narrow-content">
+                <span class="category-tag">Exploração Espacial</span>
+                <h2 class="section-title">A busca por bioassinaturas nas luas congeladas de Júpiter</h2>
+                
+                <p class="paragraph">
+                    A exploração planetária entrou em uma era de refinamento analítico. Missões direcionadas a Europa e Ganímedes não buscam apenas mapear superfícies de gelo, mas fraturar a crosta em busca de oceanos subsuperficiais estáveis. A presença de fontes hidrotermais no fundo desses oceanos extraterrestres pode fornecer a energia necessária para sustentar ecossistemas microbianos quimiossintéticos.
+                </p>
+
+                <blockquote>
+                    "A água líquida sob a crosta de Europa não é apenas um solvente; é um laboratório geoquímico ativo e isolado há bilhões de anos."
+                </blockquote>
+
+                <p class="paragraph">
+                    Instrumentos espectrométricos de última geração acoplados a sondas orbitais começam a coletar plumas de vapor d'água que escapam por fissuras tectônicas. A análise molecular inicial aponta para uma rica composição de compostos orgânicos complexos, sugerindo que as condições básicas para o surgimento da biogênese estão presentes em nosso próprio sistema solar.
+                </p>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container narrow-content">
+                <h2 class="section-title">Sobre o Projeto</h2>
+                <p class="paragraph">
+                    O <strong>Cosmos</strong> é uma iniciativa editorial independente dedicada a traduzir a complexidade da produção científica global para uma linguagem acessível, fluida e esteticamente refinada. Acreditamos que o design invisível e o conforto visual são fundamentais para a retenção do conhecimento e para a valorização do pensamento crítico.
+                </p>
+            </div>
+        </section>
 
     </main>
 

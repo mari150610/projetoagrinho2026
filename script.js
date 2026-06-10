@@ -1,38 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Rolagem Suave para os links
-    const menuItems = document.querySelectorAll('.menu-item');
-    
-    menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = item.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const navLinks = document.querySelectorAll('.sidebar-menu a');
 
-    // Detectar Seção Ativa para o Menu
-    window.addEventListener('scroll', () => {
-        let current = "";
-        const sections = document.querySelectorAll('.target-section');
+    // 1. Alternar abertura e fechamento do menu mobile
+    menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.toggle('open');
+        sidebar.classList.toggle('open');
         
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
+        // Atributos de acessibilidade ARIA atualizados dinamicamente
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        sidebar.setAttribute('aria-hidden', !isOpen);
+    });
 
-        menuItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href').includes(current)) {
-                item.classList.add('active');
+    // 2. Fechar menu ao clicar em qualquer item (Útil em ambiente mobile)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                menuToggle.classList.remove('open');
+                sidebar.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                sidebar.setAttribute('aria-hidden', 'true');
             }
         });
     });
+
+    // 3. Sistema dinâmico e performático de Scroll Spy (Destacar seção ativa no menu)
+    const sections = document.querySelectorAll('main section');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // Dispara quando 30% da seção estiver visível na tela
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const activeId = entry.target.getAttribute('id');
+                
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${activeId}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
 });
