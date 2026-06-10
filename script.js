@@ -1,55 +1,105 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    const navLinks = document.querySelectorAll('.sidebar-menu a');
 
-    // 1. Alternar abertura e fechamento do menu mobile
-    menuToggle.addEventListener('click', () => {
-        const isOpen = menuToggle.classList.toggle('open');
-        sidebar.classList.toggle('open');
-        
-        // Atributos de acessibilidade ARIA atualizados dinamicamente
-        menuToggle.setAttribute('aria-expanded', isOpen);
-        sidebar.setAttribute('aria-hidden', !isOpen);
-    });
-
-    // 2. Fechar menu ao clicar em qualquer item (Útil em ambiente mobile)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                menuToggle.classList.remove('open');
-                sidebar.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                sidebar.setAttribute('aria-hidden', 'true');
+    // 1. ANIMAÇÃO DE REVELAÇÃO AO ROLAR A PÁGINA (Scroll Reveal)
+    const secoes = document.querySelectorAll('.scroll-reveal');
+    
+    const revealOnScroll = () => {
+        const gatilho = window.innerHeight * 0.85;
+        secoes.forEach(secao => {
+            const topoSecao = secao.getBoundingClientRect().top;
+            if (topoSecao < gatilho) {
+                secao.classList.add('visible');
             }
+        });
+    };
+    
+    // Executa uma vez no início para revelar as seções visíveis no topo
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+
+
+    // 2. GERENCIAMENTO E DESTAQUE DO MARCADOR ATIVO NO MENU
+    const itensMenu = document.querySelectorAll('.nav-item');
+    const secoesPagina = document.querySelectorAll('section');
+
+    const destacarMenu = () => {
+        let secaoAtivaId = "";
+        
+        secoesPagina.forEach(secao => {
+            const topoSecao = secao.offsetTop;
+            const alturaSecao = secao.clientHeight;
+            // Define o ponto de ativação no meio da janela do navegador
+            if (window.scrollY >= (topoSecao - 300)) {
+                secaoAtivaId = secao.getAttribute('id');
+            }
+        });
+
+        itensMenu.forEach(item => {
+            item.classList.remove('active');
+            const link = item.querySelector('a');
+            if (link.getAttribute('href') === `#${secaoAtivaId}`) {
+                item.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', destacarMenu);
+
+
+    // 3. CARDS EXPANSÍVEIS (ACCORDION) NA SEÇÃO "COMO PARTICIPAR"
+    const botoesAcordeon = document.querySelectorAll('.accordion-header');
+
+    botoesAcordeon.forEach(botao => {
+        botao.addEventListener('click', function() {
+            const itemAtual = this.parentElement;
+            
+            // Fecha outros painéis que possam estar abertos (apenas um aberto por vez)
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                if (item !== itemAtual) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Alterna o estado do item clicado
+            itemAtual.classList.toggle('active');
         });
     });
 
-    // 3. Sistema dinâmico e performático de Scroll Spy (Destacar seção ativa no menu)
-    const sections = document.querySelectorAll('main section');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.3 // Dispara quando 30% da seção estiver visível na tela
-    };
 
-    const observerCallback = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeId = entry.target.getAttribute('id');
-                
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === `#${activeId}`) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
+    // 4. BOTÃO RETORNO AO TOPO (Back to Top)
+    const botaoTopo = document.getElementById('btn-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            botaoTopo.style.display = "flex";
+        } else {
+            botaoTopo.style.display = "none";
+        }
+    });
+
+    botaoTopo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+    // 5. ROLAGEM SUAVE EXPLICITA PARA COMPATIBILIDADE DE NAVEGADORES
+    const linksInternos = document.querySelectorAll('.nav-item a, #btn-explorar');
+
+    linksInternos.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const destinoId = this.getAttribute('href');
+            const elementoDestino = document.querySelector(destinoId);
+
+            if (elementoDestino) {
+                elementoDestino.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    sections.forEach(section => observer.observe(section));
+    });
 });

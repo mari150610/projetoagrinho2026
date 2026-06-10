@@ -3,120 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmos & Ciência | Portal de Divulgação Científica</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Raízes do Futuro — Potência Agrícola e Sustentabilidade</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="sidebar-navigation">
-        <span class="hamburger"></span>
-    </button>
-
-    <aside class="sidebar" id="sidebar-navigation" aria-hidden="true">
-        <div class="sidebar-brand">
-            <h2>Cosmos<span>.</span></h2>
+    <nav class="sidebar">
+        <div class="sidebar-logo">
+            <span class="logo-icon">🌿</span>
+            <h2>Raízes do Futuro</h2>
         </div>
-        <nav class="sidebar-menu">
-            <ul>
-                <li><a href="#inicio" class="active">Início</a></li>
-                <li><a href="#artigos">Artigos Recentes</a></li>
-                <li><a href="#exploracao">Exploração Espacial</a></li>
-                <li><a href="#sobre">Sobre o Portal</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <p>© 2026 Cosmos & Ciência.</p>
-        </div>
-    </aside>
+        <ul class="nav-links">
+            <li class="nav-item active" style="--marker-color: #1e4620;"><a href="#inicio"><span class="marker"></span>Início</a></li>
+            <li class="nav-item" style="--marker-color: #1d4ed8;"><a href="#agro-brasil"><span class="marker"></span>Agro no Brasil</a></li>
+            <li class="nav-item" style="--marker-color: #b45309;"><a href="#desafios"><span class="marker"></span>Desafios</a></li>
+            <li class="nav-item" style="--marker-color: #1e4620;"><a href="#solucoes"><span class="marker"></span>Soluções</a></li>
+            <li class="nav-item" style="--marker-color: #1d4ed8;"><a href="#biodiversidade"><span class="marker"></span>Biodiversidade</a></li>
+            <li class="nav-item" style="--marker-color: #b45309;"><a href="#projetos"><span class="marker"></span>Projetos</a></li>
+            <li class="nav-item" style="--marker-color: #1e4620;"><a href="#participar"><span class="marker"></span>Como Participar</a></li>
+            <li class="nav-item" style="--marker-color: #1d4ed8;"><a href="#futuro"><span class="marker"></span>Futuro</a></li>
+            <li class="nav-item" style="--marker-color: #78350f;"><a href="#referencias"><span class="marker"></span>📖 Referências</a></li>
+        </ul>
+    </nav>
 
     <main class="main-content">
         
-        <section id="inicio" class="hero-section">
-            <div class="container">
-                <span class="category-tag">Astrofísica Moderna</span>
-                <h1 class="main-title">O horizonte de eventos e o tecido do espaço-tempo</h1>
-                <p class="lead-text">
-                    Novas simulações computacionais avançadas revelam detalhes inéditos sobre a dinâmica de fluidos magnéticos nas bordas de buracos negros supermassivos, desafiando conceitos anteriores da relatividade geral.
-                </p>
-            </div>
-        </section>
+        <header class="main-header">
+            <div class="header-badge">Portal Educativo & Científico</div>
+            <h1>Raízes do Futuro</h1>
+            <p class="subtitle">Como o Brasil pode continuar sendo uma potência agrícola sem comprometer o meio ambiente?</p>
+        </header>
 
-        <section id="artigos" class="articles-section">
-            <div class="container">
-                <h2 class="section-title">Pesquisas em Destaque</h2>
-                
-                <div class="articles-grid">
-                    <article class="card">
-                        <div class="card-image-placeholder" aria-label="Ilustração conceitual de mecânica quântica"></div>
-                        <div class="card-content">
-                            <span class="card-tag">Física Quântica</span>
-                            <h3 class="card-title">Emaranhamento quântico atinge novas distâncias em vácuo</h3>
-                            <p class="card-excerpt">
-                                Cientistas conseguiram estabilizar estados emaranhados por mais de mil quilômetros, abrindo portas para a internet quântica global.
-                            </p>
-                            <a href="#" class="read-more">Ler artigo completo →</a>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-image-placeholder" aria-label="Ilustração de filamentos de DNA"></div>
-                        <div class="card-content">
-                            <span class="card-tag">Biotecnologia</span>
-                            <h3 class="card-title">Edição genética com CRISPR corrige mutações raras em tecidos vivos</h3>
-                            <p class="card-excerpt">
-                                Terapias inovadoras baseadas em RNA demonstraram eficácia sem precedentes na reversão de patologias genéticas complexas em modelos clínicos.
-                            </p>
-                            <a href="#" class="read-more">Ler artigo completo →</a>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-image-placeholder" aria-label="Representação do núcleo terrestre"></div>
-                        <div class="card-content">
-                            <span class="card-tag">Geociências</span>
-                            <h3 class="card-title">Anomalias no núcleo interno da Terra alteram rotação sutilmente</h3>
-                            <p class="card-excerpt">
-                                Estudos sismológicos indicam desaceleração periódica na velocidade do núcleo fluído, influenciando o campo geomagnético do planeta.
-                            </p>
-                            <a href="#" class="read-more">Ler artigo completo →</a>
-                        </div>
-                    </article>
+        <section id="inicio" class="content-section scroll-reveal">
+            <div class="section-container">
+                <div class="text-block">
+                    <h2>Produzir mais. Preservar melhor.</h2>
+                    <h3>O desafio de alimentar uma nação sem deixar a natureza para trás.</h3>
+                    <p>O Brasil ocupa uma posição singular no cenário geopolítico contemporâneo: ao mesmo tempo em que se consolidou como um dos principais celeiros do planeta, salvaguarda em suas fronteiras a maior biodiversidade do mundo e extensas coberturas vegetais nativas. Esta dualidade coloca o país diante de uma responsabilidade histórica e de uma oportunidade científica sem precedentes.</p>
+                    <p>A segurança alimentar global depende, em larga escala, da capacidade produtiva dos campos brasileiros. No entanto, o paradigma do século XXI exige que a expansão econômica não se faça à custa da degradação dos nossos biomas originários. O equilíbrio entre a alta produtividade agrícola e a conservação rigorosa dos ecossistemas não é apenas um ideal ético, mas uma necessidade econômica para garantir o acesso a mercados internacionais cada vez mais exigentes e conscientes.</p>
+                    <a href="#agro-brasil" class="btn-primary" id="btn-explorar">Explorar o conteúdo</a>
+                </div>
+                <div class="image-block">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Plantação sustentável sob a luz do sol">
                 </div>
             </div>
         </section>
 
-        <section id="exploracao" class="insight-section">
-            <div class="container narrow-content">
-                <span class="category-tag">Exploração Espacial</span>
-                <h2 class="section-title">A busca por bioassinaturas nas luas congeladas de Júpiter</h2>
-                
-                <p class="paragraph">
-                    A exploração planetária entrou em uma era de refinamento analítico. Missões direcionadas a Europa e Ganímedes não buscam apenas mapear superfícies de gelo, mas fraturar a crosta em busca de oceanos subsuperficiais estáveis. A presença de fontes hidrotermais no fundo desses oceanos extraterrestres pode fornecer a energia necessária para sustentar ecossistemas microbianos quimiossintéticos.
-                </p>
+        <hr class="section-divider">
 
-                <blockquote>
-                    "A água líquida sob a crosta de Europa não é apenas um solvente; é um laboratório geoquímico ativo e isolado há bilhões de anos."
-                </blockquote>
+        <section id="agro-brasil" class="content-section scroll-reveal">
+            <h2>O Agronegócio no Cenário Nacional</h2>
+            <p>A força da agropecuária brasileira é fruto de décadas de investimentos em pesquisa, inovação tecnológica e adaptação de culturas ao clima tropical, transformando solos historicamente considerados inférteis, como os do Cerrado, em polos de alta produtividade. Compreender a escala socioeconômica desse setor é fundamental para desenhar políticas de conservação que funcionem na prática.</p>
+            
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Participação no PIB</h3>
+                    <p>O agronegócio representa quase um terço de toda a riqueza gerada no país. Sua cadeia produtiva interliga a indústria de insumos, a produção de campo e o setor de serviços e logística.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Alimentação & Exportação</h3>
+                    <p>O Brasil lidera a exportação de complexo soja, carne bovina, aves, açúcar e café, fornecendo calorias essenciais para mais de um bilhão de pessoas ao redor do globo terrestre.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Emprego & Interiorização</h3>
+                    <p>O setor é um dos maiores empregadores do país, impulsionando o desenvolvimento socioeconômico de municípios no interior das regiões Centro-Oeste, Sul e Nordeste.</p>
+                </div>
+            </div>
+            
+            <p class="text-highlight">Essa pujança econômica, contudo, gera uma pressão constante sobre os recursos naturais. O grande desafio científico da nossa geração é desconectar o crescimento da produção do desmatamento de novas áreas, focando a expansão exclusivamente no ganho de eficiência e na verticalização da produção.</p>
+        </section>
 
-                <p class="paragraph">
-                    Instrumentos espectrométricos de última geração acoplados a sondas orbitais começam a coletar plumas de vapor d'água que escapam por fissuras tectônicas. A análise molecular inicial aponta para uma rica composição de compostos orgânicos complexos, sugerindo que as condições básicas para o surgimento da biogênese estão presentes em nosso próprio sistema solar.
-                </p>
+        <hr class="section-divider">
+
+        <section id="desafios" class="content-section scroll-reveal">
+            <h2>Desafios Ambientais Críticos</h2>
+            <p>O avanço das fronteiras agrícolas sem o devido ordenamento territorial gerou impactos profundos que hoje ameaçam a estabilidade climática indispensável para a própria agricultura. A análise sóbria e baseada em evidências científicas aponta para vulnerabilidades que precisam ser mitigadas imediatamente.</p>
+            
+            <div class="section-container.reverse">
+                <div class="image-block">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Mata Atlântica densa e preservada">
+                </div>
+                <div class="text-block">
+                    <ul>
+                        <li><strong>Pressão sobre os Biomas:</strong> A conversão de vegetação nativa na Amazônia e no Cerrado compromete serviços ecossistêmicos vitais, como a formação das chuvas que abastecem o Centro-Sul.</li>
+                        <li><strong>Emissão de Gases de Efeito Estufa:</strong> O uso inadequado do solo, queimadas e a fermentação entérica na pecuária tradicional são fontes significativas de emissões que o país se comprometeu internacionalmente a reduzir.</li>
+                        <li><strong>Segurança Hídrica e do Solo:</strong> A erosão decorrente do manejo inadequado assoreia rios e degrada a microbiota da terra, exigindo volumes cada vez maiores de fertilizantes sintéticos.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="sobre" class="about-section">
-            <div class="container narrow-content">
-                <h2 class="section-title">Sobre o Projeto</h2>
-                <p class="paragraph">
-                    O <strong>Cosmos</strong> é uma iniciativa editorial independente dedicada a traduzir a complexidade da produção científica global para uma linguagem acessível, fluida e esteticamente refinada. Acreditamos que o design invisível e o conforto visual são fundamentais para a retenção do conhecimento e para a valorização do pensamento crítico.
-                </p>
+        <hr class="section-divider">
+
+        <section id="solucoes" class="content-section scroll-reveal">
+            <h2>Soluções Tecnológicas e Práticas Sustentáveis</h2>
+            <p>A resposta para os dilemas ecológicos não reside na paralisação da atividade agrícola, mas na adoção em larga escala de tecnologias integradas de manejo sustentável que otimizam o uso da terra existente.</p>
+            
+            <div class="card-grid square">
+                <div class="solution-card">
+                    <h4>Sistema ILPF</h4>
+                    <p>A Integração Lavoura-Pecuária-Floresta combina diferentes atividades em uma mesma área, otimizando os ciclos biológicos, oferecendo sombra ao gado e sequestrando carbono através do plantio de árvores.</p>
+                </div>
+                <div class="solution-card">
+                    <h4>Fixação Biológica de Nitrogênio</h4>
+                    <p>O uso de bactérias benéficas que capturam o nitrogênio do ar e o transferem para as plantas substitui adubos químicos poluentes, reduzindo custos e pegadas de carbono.</p>
+                </div>
+                <div class="solution-card">
+                    <h4>Recuperação de Pastagens</h4>
+                    <p>O Brasil possui milhões de hectares de pastagens degradadas. Recuperar essas terras permite triplicar a produção de carne e grãos sem derrubar uma única árvore nativa.</p>
+                </div>
             </div>
         </section>
+
+        <hr class="section-divider">
+
+        <section id="biodiversidade" class="content-section scroll-reveal">
+            <h2>A Biodiversidade como Aliada da Produção</h2>
+            <p>A fauna e a flora nativas não são obstáculos para o desenvolvimento; são componentes funcionais de uma engenharia natural que protege as lavouras. A manutenção de corredores ecológicos e de áreas de preservação permanente traz benefícios diretos e mensuráveis para o produtor rural.</p>
+            
+            <div class="bio-container">
+                <div class="bio-text">
+                    <p>Florestas preservadas abrigam polinizadores essenciais, como abelhas e vespas, responsáveis pelo aumento de produtividade em culturas como a soja e o café. Além disso, a presença de predadores naturais — como aves e pequenos mamíferos — controla pragas agrícolas de forma orgânica, reduzindo severamente a dependência de defensivos químicos agressivos.</p>
+                    <p>Espécies emblemáticas como a <em>Araucária</em> na Região Sul, o <em>Ipê-Amarelo</em>, e animais de topo de cadeia como a <em>Onça-Pintada</em> e o <em>Mico-Leão-Dourado</em> são indicadores ecológicos de ecossistemas saudáveis. Quando a fauna sobrevive, o regime de chuvas se estabiliza, a umidade do solo é mantida e os mananciais hídricos continuam a correr límpidos.</p>
+                </div>
+                <div class="bio-gallery">
+                    <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=300&q=80" alt="Onça-pintada representativa da fauna">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80" alt="Floresta nativa preservada">
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="projetos" class="content-section scroll-reveal">
+            <h2>Iniciativas e Projetos de Referência</h2>
+            <p>Diversos programas governamentais e institucionais já demonstram, na prática, a viabilidade de uma transição ecológica de larga escala na produção agropecuária brasileira.</p>
+            
+            <div class="project-box">
+                <h3>Embrapa (Empresa Brasileira de Pesquisa Agropecuária)</h3>
+                <p>Pioneira mundial no desenvolvimento de tecnologia agrícola tropical, a Embrapa lidera as pesquisas em bioinsumos, edição genética sustentável e certificações de cadeias de carbono neutro (como a Carne Carbono Neutro).</p>
+            </div>
+            <div class="project-box">
+                <h3>Plano ABC+ (Agropecuária de Baixa Emissão de Carbono)</h3>
+                <p>Uma das políticas públicas climáticas mais ambiciosas do mundo, que financia e orienta produtores rurais a adotarem técnicas de manejo conservacionista, tratamento de dejetos animais e florestas plantadas.</p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="participar" class="content-section scroll-reveal">
+            <h2>Como Participar dessa Transformação</h2>
+            <p>A construção de um modelo agrícola sustentável não cabe exclusivamente aos cientistas ou aos produtores rurais. Trata-se de um esforço coletivo que envolve escolhas diárias e atitudes conscientes em todas as esferas da sociedade.</p>
+            
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">Para Estudantes e Jovens Cientistas</button>
+                    <div class="accordion-content">
+                        <p>A juventude pode liderar a mudança por meio de projetos de iniciação científica voltados à agroecologia, participando de feiras de ciências escolares, engajando-se em grêmios voltados à compostagem e promovendo debates sobre segurança alimentar e botânica nativa em suas comunidades.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Para Famílias e Consumidores</button>
+                    <div class="accordion-content">
+                        <p>Nas cidades, a transformação ocorre no ato da compra. Escolher produtos que possuam selos de certificação socioambiental de origem, apoiar redes de pequenos produtores agroecológicos locais, evitar radicalmente o desperdício de alimentos e praticar a separação correta de resíduos orgânicos são ações fundamentais.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Para Comunidades e Coletivos</button>
+                    <div class="accordion-content">
+                        <p>A nível local, a mobilização social pode se desdobrar na criação de hortas comunitárias urbanas, em mutirões de plantio de árvores nativas para recuperação de matas ciliares degradadas em rios urbanos e no monitoramento cidadão de políticas ambientais municipais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="futuro" class="content-section scroll-reveal">
+            <h2>O Horizonte que Queremos Construir</h2>
+            <p>O futuro da nossa soberania alimentar e ecológica não depende de soluções miraculosas ou de cenários puramente tecnológicos distantes da nossa realidade. Ele reside no fortalecimento contínuo da ciência básica, na valorização das escolas agrícolas, na difusão do conhecimento tradicional aliado à inovação acadêmica e na compreensão profunda de que a árvore de pé vale mais do que a sua derrubada.</p>
+            <p>Ao preservarmos os nossos biomas — a riqueza hídrica da Amazônia, a resiliência do Cerrado, os remanescentes da Mata Atlântica —, garantimos as chuvas que molham as lavouras do amanhã. É um ciclo de reciprocidade intergeracional. As próximas gerações herdarão um país que provou ao planeta que o progresso econômico e a reverência pela Terra andam de mãos dadas.</p>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="referencias" class="content-section scroll-reveal">
+            <h2>Biblioteca de Conhecimento e Fontes Oficiais</h2>
+            <p>Todo o conteúdo deste portal educativo baseia-se em dados consolidados, estudos de revisão acadêmica e notas técnicas emitidas pelas instituições de maior credibilidade científica no Brasil:</p>
+            
+            <div class="ref-grid">
+                <div class="ref-card">
+                    <h5>Embrapa</h5>
+                    <p>Dados técnicos sobre sistemas de Integração Lavoura-Pecuária-Floresta (ILPF) e metodologias de mitigação de gases de efeito estufa no campo.</p>
+                    <a href="https://www.embrapa.br" target="_blank" class="ref-link">Acessar portal ↗</a>
+                </div>
+                <div class="ref-card">
+                    <h5>IBGE</h5>
+                    <p>Estatísticas extraídas do Censo Agropecuário oficial, fornecendo o panorama de produtividade, uso e ocupação das terras e demografia rural.</p>
+                    <a href="https://www.ibge.gov.br" target="_blank" class="ref-link">Acessar portal ↗</a>
+                </div>
+                <div class="ref-card">
+                    <h5>Ministério do Meio Ambiente e Mudança do Clima</h5>
+                    <p>Diretrizes do Código Florestal Brasileiro (Lei nº 12.651), Cadastro Ambiental Rural (CAR) e planos de metas para preservação e restauração ecológica.</p>
+                    <a href="https://www.gov.br/mma" target="_blank" class="ref-link">Acessar portal ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p class="author-credits">Projeto desenvolvido por <strong>Maria Clara Batista Ferreira</strong>.</p>
+                <p class="purpose-text">Trabalho educacional e de divulgação científica sobre Agronegócio e Sustentabilidade no Brasil.</p>
+                <p class="source-info">Conteúdo elaborado a partir de pesquisas científicas, instituições públicas e dados estatísticos oficiais. Fontes completas disponíveis na seção de Referências.</p>
+                <p class="copyright">&copy; 2026 Maria Clara Batista Ferreira. Todos os direitos reservados.</p>
+            </div>
+        </footer>
 
     </main>
+
+    <button id="btn-top" title="Voltar ao topo">▲</button>
 
     <script src="script.js"></script>
 </body>

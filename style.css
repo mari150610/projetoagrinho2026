@@ -1,391 +1,609 @@
 /* ==========================================================================
-   RESET E CONFIGURAÇÕES BASES
+   VARIÁVEIS DE AMBIENTE E PALETA DE CORES (Mata Atlântica & Tons Orgânicos)
    ========================================================================== */
 :root {
-    --bg-primary: #fcfbf9;     /* Off-white confortável para leitura */
-    --bg-sidebar: #0f172a;     /* Slate escuro elegante para o menu */
-    --text-main: #1e293b;      /* Grafite escuro de alto contraste, sem ser preto puro */
-    --text-muted: #64748b;     /* Cinza médio para textos secundários e tags */
-    --accent: #2563eb;         /* Azul científico institucional para detalhes */
-    --accent-light: #eff6ff;   /* Fundo suave para destaques e tags */
-    --border-color: #e2e8f0;   /* Linhas divisórias sutis */
-    
-    --font-titles: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-    
-    --sidebar-width: 280px;
-    --transition-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+    --verde-floresta: #1e4620;
+    --verde-musgo: #3c6e47;
+    --verde-claro: #eef5f0;
+    --azul-profundo: #1b365d;
+    --azul-oceano: #2b5b84;
+    --amarelo-suave: #f4e8c1;
+    --bege-areia: #f5f2eb;
+    --cinza-suave: #eaeaea;
+    --texto-escuro: #2a342b;
+    --texto-claro: #faf9f6;
+    --borda-suave: rgba(30, 70, 32, 0.12);
+    --sombra-discreta: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ==========================================================================
+   RESETS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-main);
-    font-family: var(--font-body);
+    font-family: var(--fonte);
+    background-color: var(--bege-areia);
+    color: var(--texto-escuro);
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
     display: flex;
+    overflow-x: hidden;
 }
 
 /* ==========================================================================
-   LAYOUT E ESTRUTURA REQUISITADA (RESPONSIVO / SIDEBAR)
+   MENU LATERAL FIXO (SIDEBAR)
    ========================================================================== */
 .sidebar {
-    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
     height: 100vh;
-    background-color: var(--bg-sidebar);
-    color: #f8fafc;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: var(--verde-floresta);
+    color: var(--texto-claro);
+    padding: 2.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 3rem 2rem;
-    z-index: 1000;
-    transition: transform 0.4s var(--transition-smooth);
+    z-index: 100;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
 }
 
-.main-content {
-    margin-left: var(--sidebar-width);
-    flex: 1;
-    min-width: 0; /* Previne quebras em layouts grid flexíveis */
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 3rem;
-}
-
-.narrow-content {
-    max-width: 740px; /* Largura ideal perfeita para leitura contínua (Line Length) */
-    margin: 0 auto;
-}
-
-/* ==========================================================================
-   MENUS E NAVEGAÇÃO
-   ========================================================================== */
-.sidebar-brand h2 {
-    font-family: var(--font-titles);
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.sidebar-brand h2 span {
-    color: var(--accent);
-}
-
-.sidebar-menu ul {
-    list-style: none;
-}
-
-.sidebar-menu li {
-    margin-bottom: 1.5rem;
-}
-
-.sidebar-menu a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    display: inline-block;
-    position: relative;
-}
-
-.sidebar-menu a:hover,
-.sidebar-menu a.active {
-    color: #ffffff;
-}
-
-.sidebar-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.sidebar-menu a:hover::after,
-.sidebar-menu a.active::after {
-    width: 100%;
-}
-
-.sidebar-footer p {
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-/* Botão Hamburger Mobile */
-.menu-toggle {
-    display: none;
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 48px;
-    height: 48px;
-    background-color: var(--bg-sidebar);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1100;
-    justify-content: center;
+.sidebar-logo {
+    display: flex;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
 }
 
-.hamburger {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: #ffffff;
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.sidebar-logo h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
     position: relative;
-    transition: background 0.3s ease;
+    border-radius: 6px;
+    transition: var(--transicao);
 }
 
-.hamburger::before, .hamburger::after {
-    content: '';
+/* Marcadores conceituais como palitos coloridos dinâmicos */
+.nav-item .marker {
+    width: 6px;
+    height: 30px;
+    background-color: var(--marker-color);
+    border-radius: 0 4px 4px 0;
     position: absolute;
-    width: 20px;
-    height: 2px;
-    background: #ffffff;
     left: 0;
-    transition: transform 0.3s ease, top 0.3s ease;
+    transition: var(--transicao);
 }
 
-.hamburger::before { top: -6px; }
-.hamburger::after { top: 6px; }
-
-/* Estado Ativo do Botão Hamburger */
-.menu-toggle.open .hamburger {
-    background: transparent;
-}
-.menu-toggle.open .hamburger::before {
-    top: 0;
-    transform: rotate(45deg);
-}
-.menu-toggle.open .hamburger::after {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-/* ==========================================================================
-   TIPOGRAFIA E HIERARQUIA VISUAL (ESPAÇAMENTO GENEROSO)
-   ========================================================================== */
-section {
-    padding: 8rem 0; /* Seções respiram visualmente */
-    border-bottom: 1px solid var(--border-color);
-}
-
-.category-tag {
-    display: inline-block;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    background-color: var(--accent-light);
-    padding: 0.2rem 0.8rem;
-    border-radius: 4px;
-}
-
-.main-title {
-    font-family: var(--font-titles);
-    font-size: 3.5rem;
-    line-height: 1.15;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.02em;
-}
-
-.lead-text {
-    font-size: 1.35rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-weight: 400;
-}
-
-.section-title {
-    font-family: var(--font-titles);
-    font-size: 2.25rem;
-    margin-bottom: 4rem; /* Distanciamento elegante antes dos blocos */
-    position: relative;
-}
-
-.paragraph {
-    font-size: 1.125rem;
-    color: var(--text-main);
-    margin-bottom: 2rem;
-}
-
-blockquote {
-    font-family: var(--font-titles);
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--text-main);
-    border-left: 4px solid var(--accent);
-    padding-left: 2rem;
-    margin: 3.5rem 0;
-    line-height: 1.5;
-}
-
-/* ==========================================================================
-   CARDS E GRIDS (ESTILO PORTAL INSTITUCIONAL)
-   ========================================================================== */
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem; /* Espaçamento generoso entre elementos do tipo card */
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
-}
-
-.card-image-placeholder {
-    height: 200px;
-    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-    position: relative;
-}
-
-/* Detalhe estético simulando carregamento de imagem refinado */
-.card-image-placeholder::after {
-    content: '◇';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #94a3b8;
-    font-size: 1.5rem;
-}
-
-.card-content {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.card-tag {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.card-title {
-    font-family: var(--font-titles);
-    font-size: 1.4rem;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-}
-
-.card-excerpt {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    flex: 1; /* Empurra o link "Ler mais" sempre para a base */
-}
-
-.read-more {
-    color: var(--accent);
+.nav-item a {
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: opacity 0.2s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem 0.7rem 1.5rem;
+    width: 100%;
+    display: block;
+    transition: var(--transicao);
 }
 
-.read-more:hover {
+/* Efeitos de Hover e Ativo */
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:hover a,
+.nav-item.active a {
+    color: var(--texto-claro);
+    padding-left: 1.8rem;
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active .marker {
+    width: 12px;
+}
+
+/* ==========================================================================
+   ESTRUTURA DE CONTEÚDO PRINCIPAL
+   ========================================================================== */
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 4rem 5%;
+    max-width: 1200px;
+}
+
+/* Header de Entrada */
+.main-header {
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+.header-badge {
+    display: inline-block;
+    background-color: var(--amarelo-suave);
+    color: #5c4308;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.main-header h1 {
+    font-size: 3.5rem;
+    color: var(--verde-floresta);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.main-header .subtitle {
+    font-size: 1.4rem;
+    color: var(--azul-oceano);
+    font-weight: 400;
+    max-width: 800px;
+}
+
+/* Configurações Gerais de Seções */
+.content-section {
+    padding: 3rem 0;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: var(--verde-floresta);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--borda-suave), rgba(0, 0, 0, 0));
+    margin: 4rem 0;
+}
+
+/* Layouts Flexíveis (Texto + Imagem) */
+.section-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.section-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-block {
+    flex: 1.2;
+}
+
+.text-block h3 {
+    font-size: 1.3rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1.2rem;
+}
+
+.image-block {
+    flex: 0.8;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--sombra-discreta);
+    border: 4px solid var(--texto-claro);
+}
+
+/* Componentes de Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--verde-musgo);
+    color: var(--texto-claro);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(60, 110, 71, 0.2);
+    transition: var(--transicao);
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-floresta);
+    transform: translateY(-2px);
+}
+
+/* Destaques Tipográficos */
+.text-highlight {
+    background-color: var(--verde-claro);
+    padding: 1.5rem;
+    border-left: 5px solid var(--verde-musgo);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   CARDS E GRIDS DE INFORMAÇÕES
+   ========================================================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.info-card {
+    background-color: var(--texto-claro);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--borda-suave);
+    box-shadow: var(--sombra-discreta);
+    transition: var(--transicao);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul-oceano);
+}
+
+.info-card h3 {
+    color: var(--azul-profundo);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Variação de cards para soluções */
+.solution-card {
+    background-color: var(--verde-claro);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(60, 110, 71, 0.1);
+    box-shadow: var(--sombra-discreta);
+}
+
+.solution-card h4 {
+    color: var(--verde-floresta);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Seção Biodiversidade Avançada */
+.bio-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.bio-text {
+    flex: 1.3;
+}
+
+.bio-gallery {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bio-gallery img {
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    border-radius: 8px;
+    filter: grayscale(15%);
+    transition: var(--transicao);
+}
+
+.bio-gallery img:hover {
+    filter: grayscale(0%);
+}
+
+/* Projetos em Blocos Lineares */
+.project-box {
+    background-color: var(--texto-claro);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid var(--azul-oceano);
+    box-shadow: var(--sombra-discreta);
+}
+
+.project-box h3 {
+    font-size: 1.3rem;
+    color: var(--azul-profundo);
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   ACORDEON INTERATIVO (Como Participar)
+   ========================================================================== */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    background-color: var(--texto-claro);
+    border-radius: 8px;
+    border: 1px solid var(--borda-suave);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--verde-floresta);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transicao);
+}
+
+.accordion-header:hover {
+    background-color: var(--verde-claro);
+}
+
+.accordion-header::after {
+    content: '▼';
+    font-size: 0.8rem;
+    transition: var(--transicao);
+}
+
+.accordion-item.active .accordion-header::after {
+    transform: rotate(-180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    padding: 0 1.5rem;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--borda-suave);
+}
+
+/* ==========================================================================
+   REFERÊNCIAS
+   ========================================================================== */
+.ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.ref-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed var(--borda-suave);
+}
+
+.ref-card h5 {
+    font-size: 1.1rem;
+    color: var(--texto-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.ref-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.ref-link {
+    font-size: 0.9rem;
+    color: var(--azul-oceano);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ref-link:hover {
     text-decoration: underline;
 }
 
 /* ==========================================================================
-   MEDIA QUERIES (GARANTIA DE RESPONSIVIDADE E ADAPTAÇÃO)
+   ELEMENTOS DE INTERATIVIDADE RESTRITA (Retorno ao Topo & Animações)
    ========================================================================== */
-@media (max-width: 1024px) {
-    .main-title {
-        font-size: 2.75rem;
+#btn-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--verde-floresta);
+    color: var(--texto-claro);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 99;
+    transition: var(--transicao);
+}
+
+#btn-top:hover {
+    background-color: var(--verde-musgo);
+    transform: translateY(-3px);
+}
+
+/* Classes para Efeito de Rolagem Suave por JavaScript */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+.main-footer {
+    background-color: #242d25;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-top: 6rem;
+    font-size: 0.95rem;
+    border-top: 3px solid var(--verde-musgo);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.author-credits {
+    color: var(--texto-claro);
+    font-size: 1.1rem;
+}
+
+.purpose-text {
+    font-style: italic;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Tablets e Dispositivos Móveis)
+   ========================================================================== */
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
     }
     
-    .container {
-        padding: 0 2rem;
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
     }
     
-    section {
-        padding: 6rem 0;
+    .sidebar-logo {
+        margin-bottom: 1.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .nav-item {
+        flex: 1 1 auto;
+    }
+    
+    .nav-item .marker {
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        border-radius: 4px 4px 0 0;
+    }
+    
+    .nav-item a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+    
+    .nav-item:hover a, .nav-item.active a {
+        padding-left: 1rem;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-container, .section-container.reverse {
+        flex-direction: column;
     }
 }
 
-@media (max-width: 768px) {
-    /* Ativação do Menu Mobile */
-    .menu-toggle {
-        display: flex;
-    }
-
-    .sidebar {
-        transform: translateX(-100%);
-        width: 100%; /* Ocupa tela cheia em celulares de forma elegante */
-    }
-
-    .sidebar.open {
-        transform: translateX(0);
-    }
-
-    .main-content {
-        margin-left: 0; /* Remove a margem já que a sidebar flutua */
-        padding-top: 4rem;
-    }
-
-    .main-title {
-        font-size: 2.25rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .lead-text {
-        font-size: 1.15rem;
-    }
-
-    section {
-        padding: 4rem 0;
-    }
-
-    .section-title {
-        margin-bottom: 2.5rem;
-        font-size: 1.8rem;
-    }
-
-    .articles-grid {
-        gap: 2rem;
+@media (max-width: 576px) {
+    .main-header h1 {
+        font-size: 2.2rem;
     }
     
-    .card-content {
-        padding: 1.75rem;
+    .main-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .bio-container {
+        flex-direction: column;
+    }
+    
+    .bio-gallery {
+        width: 100%;
     }
 }
