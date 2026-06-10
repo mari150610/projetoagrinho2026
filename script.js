@@ -1,129 +1,93 @@
-/**
- * Portal AgroSustentável - Lógica de Interatividade (Vanilla JS)
- * Desenvolvido por Maria Clara Batista Ferreira
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    // 1. GERENCIAMENTO DO MENU MOBILE (HAMBÚRGUER)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', () => {
-            const isOpen = sidebar.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', isOpen);
-        });
-
-        // Fechamento automático do menu mobile após clique em um link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (sidebar.classList.contains('open')) {
-                    sidebar.classList.remove('open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    }
-
-    // 2. SCROLL SUAVE ATÉ AS SEÇÕES
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Botão de explorar da Hero Section
-    const btnExplore = document.querySelector('.btn-explore');
-    if (btnExplore) {
-        btnExplore.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
-
-    // 3. DESTAQUE AUTOMÁTICO DA ABA ATIVA (SCROLL SPY)
-    const sections = document.querySelectorAll('section');
     
-    window.addEventListener('scroll', () => {
-        let currentSectionId = 'inicio';
-        const scrollPosition = window.scrollY + 200; // Ajuste de offset de leitura
+    // --- 1. DESTAQUE DINÂMICO DO MARCADOR ATIVO NO MENU LATERAL ---
+    const sections = document.querySelectorAll('.target-section');
+    const menuItems = document.querySelectorAll('.menu-item');
 
+    const updateActiveMarker = () => {
+        let currentSectionId = '';
+        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+            const sectionHeight = section.clientHeight;
+            // Verifica se a rolagem atual passou do topo da seção deduzindo uma margem técnica
+            if (window.scrollY >= (sectionTop - 160)) {
                 currentSectionId = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active');
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${currentSectionId}`) {
+                item.classList.add('active');
             }
         });
-    });
-
-    // 4. ANIMAÇÕES DISCRETAS AO ENTRAR NA TELA (INTERSECTION OBSERVER)
-    const fadeSections = document.querySelectorAll('.fade-in-section');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15 // Gatilho dispara quando 15% da seção está visível
     };
 
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Cancela a observação após animar para otimizar desempenho
-                observer.unobserve(entry.target);
+    window.addEventListener('scroll', updateActiveMarker);
+
+
+    // --- 2. ROLAGEM SUAVE EXTRA PARA CLIQUES NOS MARCADORES ---
+    menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = item.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetPosition = targetSection.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
-    }, observerOptions);
-
-    fadeSections.forEach(section => {
-        sectionObserver.observe(section);
     });
 
-    // 5. BOTÃO VOLTAR AO TOPO
-    const backToTopBtn = document.getElementById('back-to-top');
 
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            // Exibe o botão se a página descer mais que 600px
-            if (window.scrollY > 600) {
-                backToTopBtn.classList.add('show');
+    // --- 3. CARDS EXPANSÍVEIS (ACORDEONS) - SEÇÃO COMO PARTICIPAR ---
+    const accTriggers = document.querySelectorAll('.acc-trigger');
+
+    accTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const parent = this.parentElement;
+            const panel = this.nextElementSibling;
+            
+            // Alterna o estado do item clicado
+            if (parent.classList.contains('open')) {
+                panel.style.maxHeight = null;
+                parent.classList.remove('open');
             } else {
-                backToTopBtn.classList.remove('show');
+                // Fecha outros painéis abertos para manter a organização limpa
+                document.querySelectorAll('.acc-item').forEach(item => {
+                    item.classList.remove('open');
+                    item.querySelector('.acc-panel').style.maxHeight = null;
+                });
+
+                // Abre o painel correspondente calculando sua altura real de forma fluida
+                parent.classList.add('open');
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
+    });
 
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+
+    // --- 4. BOTÃO DE RETORNO AO TOPO ---
+    const btnBackToTop = document.getElementById('btnBackToTop');
+
+    window.addEventListener('scroll', () => {
+        // Exibe o botão apenas se ultrapassar 400px de rolagem vertical
+        if (window.scrollY > 400) {
+            btnBackToTop.style.display = 'flex';
+        } else {
+            btnBackToTop.style.display = 'none';
+        }
+    });
+
+    btnBackToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-    }
+    });
 });
