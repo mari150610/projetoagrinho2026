@@ -1,38 +1,60 @@
 # projetoagrinho2026
-# 🌾 Agro Forte & Sustentável
+# 🌱 Raízes do Futuro
 
-> Uma visão de futuro onde a tecnologia do campo e o respeito à terra caminham juntos.
+## Sobre o Projeto
 
----
+**Raízes do Futuro** é um portal educativo e de divulgação científica que busca discutir um dos grandes desafios do século XXI: como o Brasil pode continuar sendo uma potência agrícola sem comprometer o meio ambiente.
 
-## 📝 Sobre o Projeto
-Este site é um **manifesto digital** que foge do óbvio para mostrar que o verdadeiro "agro forte" protege sua base: o solo, o trabalhador e o clima. Aqui, a ciência encontra a empatia para provar que a alta produtividade pode — e deve — ser sinônimo de preservação ambiental.
+O site apresenta informações sobre a importância do agronegócio brasileiro para a economia, os principais desafios ambientais relacionados à produção agrícola e as soluções sustentáveis que vêm sendo desenvolvidas para promover o equilíbrio entre crescimento econômico, preservação da biodiversidade e responsabilidade ambiental.
 
----
+Ao longo do portal, o visitante encontra conteúdos sobre biodiversidade brasileira, projetos de conservação, iniciativas sustentáveis e formas de participação da sociedade na construção de um futuro mais equilibrado e consciente.
 
-## 🎯 Para que é Usado?
-* **Informar com Propósito:** Explicar a ciência por trás da saúde do solo e da resiliência climática.
-* **Proteger a Vida:** Destacar protocolos de segurança física e digital para as famílias do campo.
-* **Conectar Fronteiras:** Mostrar ao público urbano a rastreabilidade e a transparência do alimento.
+## Objetivos
 
----
+* Promover a educação ambiental;
+* Incentivar a reflexão sobre sustentabilidade no agronegócio;
+* Divulgar informações baseadas em fontes confiáveis;
+* Valorizar a biodiversidade brasileira;
+* Demonstrar a importância da ciência, da educação e da responsabilidade coletiva para as futuras gerações.
 
-## 🎨 Design e Sentimentos (Sem Imagens)
-* 🌲 **Verde Floresta:** A solidez e a vida da nossa biosfera.
-* 🌾 **Amarelo Mostarda:** O sol, a colheita e a riqueza dos grãos.
-* 🌊 **Azul Técnico:** A segurança da informação e da tecnologia.
-* 🌋 **Vermelho Terracota:** O coração de quem trabalha e o alerta da natureza.
-* 🔤 **Letras com Alma:** Fonte `Lora` (elegância acadêmica) e `Plus Jakarta Sans` (leitura leve).
+## Tecnologias Utilizadas
 
----
+O projeto foi desenvolvido utilizando:
 
-## 🛠️ Tecnologias e Estrutura
-* **HTML5 / CSS3 / JavaScript Nativo:** Layout responsivo, limpo e com abas interativas.
-* **Arquivos:** `index.html` (Conteúdo), `style.css` (Visual) e `script.js` (Movimento).
+* HTML5
+* CSS3
+* JavaScript
 
----
+Sem a utilização de frameworks ou bibliotecas externas.
 
-## 👩‍💻 Idealização e Coração do Projeto
-* **Criadora:** Maria Clara Batista Ferreira
-* **Ano:** 2026
-* **Missão:** Transformar tecnologia e amor pelo meio ambiente em conhecimento acessível.
+## Desenvolvimento
+
+Este projeto foi desenvolvido por **Maria Clara Batista Ferreira** com o apoio das ferramentas de inteligência artificial **ChatGPT (OpenAI)** e **Gemini (Google)**.
+
+As plataformas foram utilizadas como suporte para pesquisa, organização de ideias, estruturação de conteúdo, revisão textual, auxílio na programação e aprimoramento da apresentação visual do site. Todas as decisões relacionadas ao tema, seleção das informações, adaptação dos conteúdos e construção final do projeto foram realizadas pela autora.
+
+O uso da inteligência artificial teve caráter educacional e colaborativo, funcionando como uma ferramenta de apoio ao aprendizado, à pesquisa e ao desenvolvimento do trabalho.
+
+## Estrutura do Site
+
+O portal está organizado nas seguintes seções:
+
+* Início
+* Agro no Brasil
+* Desafios Ambientais
+* Soluções Sustentáveis
+* Biodiversidade Brasileira
+* Projetos Brasileiros
+* Como Participar
+* Futuro
+* Referências
+
+## Autoria
+
+**Maria Clara Batista Ferreira**
+
+Projeto desenvolvido para fins educacionais e de divulgação científica.
+
+**Raízes do Futuro** busca contribuir para a conscientização sobre a importância de conciliar produção agrícola, preservação ambiental e desenvolvimento sustentável no Brasil.
+
+© 2026 Maria Clara Batista Ferreira. Todos os direitos reservados.
