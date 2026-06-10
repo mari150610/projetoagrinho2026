@@ -3,174 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte & Sustentável</title>
+    <title>Produzir e Preservar: O Futuro Sustentável do Agro Brasileiro</title>
+    <meta name="description" content="Portal educativo e científico sobre a relação entre agronegócio, tecnologia e sustentabilidade ambiental no Brasil.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <span class="logo-bold">AGRO</span><span class="logo-light">FORTE</span>
-            </div>
-            <nav class="nav-menu">
-                <a href="#inicio">Início</a>
-                <a href="#pilares">Pilares Científicos</a>
-                <a href="#sobre">O Manifesto</a>
-                <a href="#contato">Contato</a>
-            </nav>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <h2>Portal AgroSustentável</h2>
+            <p>Pesquisa & Conhecimento</p>
         </div>
-    </header>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">Início</a></li>
+                <li><a href="#agro-brasil" class="nav-link">Agro no Brasil</a></li>
+                <li><a href="#desafios" class="nav-link">Desafios Ambientais</a></li>
+                <li><a href="#solucoes" class="nav-link">Soluções Sustentáveis</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos Brasileiros</a></li>
+                <li><a href="#futuro" class="nav-link">Futuro do Agro</a></li>
+                <li><a href="#referencias" class="nav-link">Referências</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <section id="inicio" class="hero-section">
-        <div class="hero-content">
-            <span class="hero-badge">Produtividade com Consciência</span>
-            <h1>A evolução da terra passa pela ciência e pela segurança.</h1>
-            <p>Unindo a robustez da produção no campo à preservação ecossistêmica: o verdadeiro agro forte é aquele que protege sua base.</p>
-            <a href="#pilares" class="btn-primary">Explorar Pesquisas</a>
-        </div>
-    </section>
+    <main class="main-content">
 
-    <section id="pilares" class="pillars-section">
-        <div class="section-title-wrapper">
-            <h2>Pilares da Produtividade Sustentável</h2>
-            <p>Dados, análises e soluções que conectam o campo ao futuro do planeta.</p>
-        </div>
-
-        <div class="tabs-container">
-            <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="solo">
-                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8z"/></svg>
-                    Saúde do Solo
-                </button>
-                <button class="tab-btn" data-tab="seguranca">
-                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                    Segurança do Agricultor
-                </button>
-                <button class="tab-btn" data-tab="rastreabilidade">
-                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    Campo à Cidade
-                </button>
-                <button class="tab-btn" data-tab="impactos">
-                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
-                    Impactos da Natureza
-                </button>
-            </div>
-
-            <div class="tabs-content">
-                <div class="tab-pane active" id="solo">
-                    <div class="pane-grid">
-                        <div class="pane-text">
-                            <span class="pane-tag tag-verde">Microbiologia Ativa</span>
-                            <h3>A inteligência invisível sob nossos pés</h3>
-                            <p>O manejo sustentável moderno foca na regeneração da microbiota do solo. Longe de ser apenas um suporte físico, a terra é um organismo vivo. Pesquisas recentes apontam que a rotação de culturas aliada ao plantio direto preserva a umidade e fixa nitrogênio de forma natural, reduzindo a dependência de insumos sintéticos em até 35%.</p>
-                            <blockquote>"Solos saudáveis sequestram mais carbono, mitigando os efeitos das mudanças climáticas globais."</blockquote>
-                        </div>
-                        <div class="pane-highlight color-verde">
-                            <h4>Indicador Crítico</h4>
-                            <p class="stat-number">40%</p>
-                            <p>Mais retenção de água em solos com manejo de cobertura orgânica contínua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="seguranca">
-                    <div class="pane-grid">
-                        <div class="pane-text">
-                            <span class="pane-tag tag-amarelo">Protocolos de Vida</span>
-                            <h3>Proteção jurídica, física e digital no campo</h3>
-                            <p>A segurança do trabalhador rural transita pelo uso correto de Equipamentos de Proteção Individual (EPIs), mas vai além: envolve a blindagem jurídica e a segurança cibernética em fazendas automatizadas. Proteger quem produz contra acidentes de trabalho e contra vulnerabilidades de dados de maquinários é essencial para a manutenção da soberania alimentar.</p>
-                        </div>
-                        <div class="pane-highlight color-amarelo">
-                            <h4>Foco Técnico</h4>
-                            <p class="stat-number">Zero</p>
-                            <p>É a meta aceitável de acidentes com a implementação de treinamentos contínuos de NR-31.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="rastreabilidade">
-                    <div class="pane-grid">
-                        <div class="pane-text">
-                            <span class="pane-tag tag-azul">Conexão Segura</span>
-                            <h3>Transparência radical da colheita à mesa</h3>
-                            <p>A segurança do campo à cidade baseia-se na rastreabilidade. O consumidor moderno exige saber a origem do que consome. Através de sistemas integrados, é possível monitorar o histórico fitossanitário do alimento, garantindo segurança alimentar para a população urbana e valorização cambial para o produtor honesto.</p>
-                        </div>
-                        <div class="pane-highlight color-azul">
-                            <h4>Transparência</h4>
-                            <p class="stat-number">100%</p>
-                            <p>De rastreabilidade digital impede o desperdício logístico nas cadeias de suprimento.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="impactos">
-                    <div class="pane-grid">
-                        <div class="pane-text">
-                            <span class="pane-tag tag-vermelho">Resiliência Climática</span>
-                            <h3>Decifrando as forças climáticas extremas</h3>
-                            <p>Os impactos da natureza (como secas prolongadas e chuvas torrenciais) não podem ser evitados, mas seus danos podem ser calculados e minimizados. A agricultura de precisão utiliza inteligência preditiva para mapear microclimas, ajustando calendários de semeadura e evitando a perda massiva de safras.</p>
-                        </div>
-                        <div class="pane-highlight color-vermelho">
-                            <h4>Alerta Global</h4>
-                            <p class="stat-number">-25%</p>
-                            <p>De quebra de safra estimada quando aplicados modelos de previsão meteorológica IA.</p>
-                        </div>
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <h1 class="fade-in-element">Produzir mais. Preservar melhor.</h1>
+                <p class="hero-subtitle fade-in-element">O desafio do agronegócio brasileiro no século XXI.</p>
+                <p class="hero-description fade-in-element">
+                    A segurança alimentar global e a conservação da biodiversidade são os dois maiores pilares da estabilidade planetária contemporânea. Como a principal potência agroambiental do mundo, o Brasil encontra-se no centro desse debate acadêmico e macroeconômico, demonstrando que o avanço tecnológico e o rigor científico são as chaves para alinhar a alta produtividade com a resiliência ecológica.
+                </p>
+                <a href="#agro-brasil" class="btn-explore fade-in-element">Explorar o conteúdo</a>
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="mouse">
+                        <div class="wheel"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="sobre" class="manifesto-section">
-        <div class="manifesto-container">
-            <h2>O Manifesto por um Agro Forte</h2>
-            <p class="lead">Não existe produtividade real que destrua o próprio amanhã. O verdadeiro "agro forte" harmoniza a engenharia genética, a tecnologia de ponta e o respeito aos ciclos da biosfera.</p>
-            <p>Propomos uma quebra de paradigma: o campo não deve lutar contra a natureza, mas sim decodificar seus padrões para produzir em simbiose com ela. A segurança do planeta começa no sulco da terra cultivada.</p>
-        </div>
-    </section>
+        <section id="agro-brasil" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Panorâmica Macroeconômica</span>
+                <h2>O Agro no Brasil e seu Impacto Global</h2>
+            </div>
+            <div class="section-body">
+                <p class="academic-text">
+                    O agronegócio brasileiro consolidou-se, nas últimas décadas, como um dos motores fundamentais da economia nacional e um componente estratégico para a segurança alimentar global. A transição de um país importador de alimentos na década de 1970 para um dos maiores exportadores mundiais baseou-se fortemente em investimentos em ciência e tecnologia tropical aplicada. Hoje, o setor não compreende apenas a produção primária dentro da porteira, mas engloba uma complexa cadeia industrial de insumos, maquinários, processamento e redes de distribuição logística.
+                </p>
+                <p class="academic-text">
+                    Sob a ótica científica, a eficiência produtiva brasileira destaca-se pelo fenômeno conhecido como "efeito poupa-terra". Através do aumento vertical da produtividade por hectare — impulsionado por biotecnologia, melhoramento genético vegetal e manejo avançado de solos —, o país consegue multiplicar suas safras anuais sem a necessidade de expansão proporcional sobre áreas de vegetação nativa, otimizando o uso do espaço geográfico disponível.
+                </p>
 
-    <section id="contato" class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Alie-se à Causa</h2>
-                <p>Tem interesse em acessar nossos relatórios completos de pesquisa ou implementar estes sistemas de segurança na sua propriedade? Entre em contato conosco.</p>
-                <div class="info-item">
-                    <strong>Endereço de Pesquisa:</strong> Centro de Desenvolvimento Agro-Sustentável, Bloco C
-                </div>
-                <div class="info-item">
-                    <strong>E-mail:</strong> contato@agrofortesustentavel.org
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Participação no PIB</h3>
+                        <div class="stat-value">~25%</div>
+                        <p>Representação aproximada do complexo agroindustrial no Produto Interno Bruto total do Brasil.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Exportações</h3>
+                        <div class="stat-value">48%</div>
+                        <p>Das exportações totais brasileiras têm origem no setor agropecuário, equilibrando a balança comercial.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Produção de Grãos</h3>
+                        <div class="stat-value">+310M</div>
+                        <p>De toneladas estimadas nas safras recentes, liderando a oferta global de soja, café e açúcar.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Empregabilidade</h3>
+                        <div class="stat-value">1 em 3</div>
+                        <p>Trabalhadores brasileiros está formal ou informalmente ligado à cadeia ampla do agronegócio.</p>
+                    </div>
                 </div>
             </div>
-            <div class="contact-form-wrapper">
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso (Simulação).');">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" required placeholder="Ex: Roberto Silva">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail Corporativo</label>
-                        <input type="email" id="email" required placeholder="Ex: roberto@fazenda.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem ou Solicitação de Dados</label>
-                        <textarea id="message" rows="5" required placeholder="Como podemos ajudar no seu ecossistema?"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Enviar Solicitação</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="main-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 AgroForte Sustentável. Todos os direitos reservados.</p>
-            <p class="credit">Desenvolvido e Idealizado por: <span class="author-name">Maria Clara Batista Ferreira</span></p>
-        </div>
-    </footer>
+        <section id="desafios" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Análise de Vulnerabilidade</span>
+                <h2>Os Desafios Ambientais Contemporâneos</h2>
+            </div>
+            <div class="section-body">
+                <p class="academic-text">
+                    Apesar dos êxitos produtivos, a interface entre a expansão agropecuária e a integridade dos ecossistemas impõe desafios severos que demandam diagnóstico científico preciso e isento. O equilíbrio ecológico não é uma pauta externa à produção; pelo contrário, a própria viabilidade do agronegócio depende diretamente da manutenção dos serviços ecossistêmicos, como o regime cíclico de chuvas gerado pela evapotranspiração da Floresta Amazônica (os chamados "rios voadores").
+                </p>
+
+                <div class="challenges-container">
+                    <div class="challenge-block">
+                        <div class="challenge-meta">
+                            <h4>01. Supressão de Vegetação e Biodiversidade</h4>
+                        </div>
+                        <p class="academic-text">O desmatamento ilegal representa a principal ameaça à reputação internacional e à estabilidade climática do país. A perda de fragmentos de biomas como o Cerrado e a Amazônia altera microclimas locais e fragmenta habitats, reduzindo o patrimônio genético de fauna e flora indispensáveis para o equilíbrio biológico natural.</p>
+                    </div>
+
+                    <div class="challenge-block">
+                        <div class="challenge-meta">
+                            <h4>02. Mudanças Climáticas e Gases Estufa</h4>
+                        </div>
+                        <p class="academic-text">A agropecuária contribui significativamente para as emissões nacionais de Gases de Efeito Estufa (GEE), majoritariamente via fermentação entérica do gado bovino (metano) e manejo inadequado de solos nitrificados (óxido nitroso). Mitigar essas emissões é urgente para cumprir as metas internacionais do Acordo de Paris.</p>
+                    </div>
+
+                    <div class="challenge-block">
+                        <div class="challenge-meta">
+                            <h4>03. Degradação Estrutural do Solo e Recursos Hídricos</h4>
+                        </div>
+                        <p class="academic-text">O uso de maquinário pesado sem planejamento de curvas de nível provoca a compactação do solo, gerando processos erosivos severos e assoreamento de rios. Somado a isso, o estresse hídrico decorrente da captação não outorgada para irrigação intensiva ameaça aquíferos e bacias hidrográficas vitais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucoes" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Tecnologia e Práticas Agroecológicas</span>
+                <h2>Soluções Sustentáveis em Escala Comercial</h2>
+            </div>
+            <div class="section-body">
+                <p class="academic-text">
+                    A superação dos gargalos ecológicos ocorre através da implementação sistemática de tecnologias mitigadoras e manejo conservacionista. A ciência agronômica brasileira desenvolveu métodos replicáveis que convertem passivos ambientais em ativos produtivos altamente eficientes.
+                </p>
+
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/></svg>
+                        </div>
+                        <h3>Agricultura de Baixo Carbono</h3>
+                        <p>Conjunto de práticas integradas — como o Sistema Plantio Direto (SPD) e a fixação biológica de nitrogênio — que evitam a mobilização mecânica intensa da terra, promovendo o sequestro de carbono atmosférico diretamente na matéria orgânica profunda do solo.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 10c0-4.42-3.58-8-8-8S4 5.58 4 10c0 4.42 3.58 8 8 8s8-3.58 8-8zM12 4c3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6s-6-2.69-6-6c0-3.31 2.69-6 6-6z"/></svg>
+                        </div>
+                        <h3>Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
+                        <p>Estratégia produtiva que consorcia atividades agrícolas, pecuárias e florestais em uma mesma área geográfica de forma rotativa. Cria sinergias biológicas positivas, melhora o bem-estar animal sob sombreamento e diversifica a renda do produtor.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                        </div>
+                        <h3>Recuperação de Pastagens</h3>
+                        <p>Tratamento químico e mecânico de solos semi-áridos ou degradados por superpastoreio. A reinserção de nutrientes e gramíneas adequadas reconverte solos improdutivos em áreas de alta capacidade, coibindo pressões por novos desmatamentos de florestas primárias.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                        </div>
+                        <h3>Agricultura de Precisão e IoT</h3>
+                        <p>Uso direcionado de sensores de umidade de solo, estações meteorológicas integradas e drones de imageamento espectral. Permite a aplicação localizada e racionalizada de recursos hídricos e insumos químicos, reduzindo desperdícios a índices próximos de zero.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <h3>Uso Massivo de Bioinsumos</h3>
+                        <p>Substituição progressiva de fertilizantes sintéticos e defensivos químicos por defensivos biológicos obtidos por microrganismos, fungos benéficos e predadores naturais. Garante proteção fitossanitária sem contaminação do lençol freático.</p>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+                        </div>
+                        <h3>Monitoramento Geoespacial</h3>
+                        <p>Rastreamento via satélite das cadeias de suprimentos agrícolas para certificar que os grãos ou carnes comercializadas internacionalmente não possuem origem em áreas desmatadas ilegalmente após as datas de moratórias ambientais ecológicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Casos de Sucesso Institucional</span>
+                <h2>Projetos de Referência no Cenário Nacional</h2>
+            </div>
+            <div class="section-body">
+                <div class="project-item">
+                    <div class="project-content">
+                        <h3>Plano ABC+ (Plano de Adaptação e Baixa Emissão de Carbono na Agricultura)</h3>
+                        <p class="academic-text">
+                            O Plano ABC+ configura-se como a principal política pública setorial do Estado brasileiro voltada à mitigação das mudanças climáticas no campo. Coordenado pelo Ministério da Agricultura e Pecuária (MAPA), o programa estabelece metas rigorosas para a adoção de tecnologias sustentáveis, amparadas por linhas de crédito de custeio diferenciadas com juros controlados para produtores que se comprometam com práticas ecológicas verificáveis.
+                        </p>
+                        <div class="project-meta-grid">
+                            <div><strong>Objetivo Central:</strong> Reduzir a emissão equivalente de milhões de toneladas de $CO_2$ através do estímulo estatal continuado até 2030.</div>
+                            <div><strong>Resultados:</strong> Mais de 50 milhões de hectares já foram convertidos ou otimizados no país utilizando as diretrizes de fomento ecológico do programa.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-content">
+                        <h3>Embrapa Agrobiologia e Centros de Pesquisa Decentralizados</h3>
+                        <p class="academic-text">
+                            A Empresa Brasileira de Pesquisa Agropecuária (Embrapa) desenvolve ciência de fronteira adaptada às especificidades edafoclimáticas tropicais. Suas pesquisas aplicadas geraram as linhagens de soja capazes de realizar a fixação biológica de nitrogênio em simbiose com bactérias do gênero <i>Rhizobium</i>, eliminando quase por completo a necessidade de adubos químicos nitrogenados importados de alto impacto carbônico.
+                        </p>
+                        <div class="project-meta-grid">
+                            <div><strong>Funcionamento:</strong> Laboratórios de ponta isolam variantes biológicas nativas e transferem essas propriedades genéticas adaptativas para cultivares comerciais.</div>
+                            <div><strong>Impacto Econômico e Ambiental:</strong> Economia anual bilionária para o erário nacional e mitigação direta do escoamento superficial de nitratos poluentes em águas doces.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Inovação e Fronteira Tecnológica</span>
+                <h2>O Futuro do Agro: A Revolução 5.0</h2>
+            </div>
+            <div class="section-body">
+                <p class="academic-text">
+                    A próxima fronteira do desenvolvimento agrário assenta-se sobre a digitalização profunda do campo, comumente denominada Agricultura 5.0. A convergência entre biotecnologia avançada, Inteligência Artificial (IA) e redes de conectividade em tempo real permitirá gerenciar propriedades rurais não mais por hectare, mas sim por planta individualizada ou por animal específico. Algoritmos de aprendizado de máquina processam terabytes de dados meteorológicos históricos e imagens de satélite orbitais para predizer infestações de pragas agrícolas com dias de antecedência, viabilizando intervenções cirúrgicas localizadas.
+                </p>
+
+                <blockquote class="highlight-quote">
+                    "O futuro do agronegócio global depende intrinsecamente da capacidade científica de produzir mais alimentos e fibras por metro quadrado, utilizando volumes substancialmente menores de recursos naturais, insumos sintéticos e energia."
+                </blockquote>
+
+                <p class="academic-text">
+                    Essa sofisticação tecnológica redefinirá as dinâmicas de emprego rurais, demandando profissionais altamente qualificados nas áreas de análise de dados, engenharia de automação e bioinformática. O Brasil caminha para consolidar-se não apenas como um exportador de <i>commodities</i> brutas, mas sim como um grande exportador global de conhecimento científico e inteligência ecológica aplicada a ecossistemas tropicais de alta complexidade.
+                </p>
+            </div>
+        </section>
+
+        <section id="referencias" class="content-section fade-in-section">
+            <div class="section-header">
+                <span>Apoio Bibliográfico</span>
+                <h2>Referências Acadêmicas e Fontes de Dados</h2>
+            </div>
+            <div class="section-body">
+                <ul class="references-list">
+                    <li>EMBRAPA - Empresa Brasileira de Pesquisa Agropecuária. <strong>Visão 2030: O futuro da agricultura brasileira</strong>. Brasília, DF: Embrapa, 2018. Disponível em fontes institucionais oficiais.</li>
+                    <li>IBGE - Instituto Brasileiro de Geografia e Estatística. <strong>Censo Agropecuário: Resultados definitivos e séries históricas de produtividade</strong>. Rio de Janeiro: IBGE, 2017-2024.</li>
+                    <li>MINISTÉRIO DA AGRICULTURA E PECUÁRIA (MAPA). <strong>Plano Setorial para Adaptação à Mudança do Clima e Baixa Emissão de Carbono na Agropecuária com vistas ao Desenvolvimento Sustentável (2020-2030) - ABC+</strong>. Brasília: MAPA, 2021.</li>
+                    <li>FAO - Organização das Nações Unidas para a Alimentação e a Agricultura. <strong>The State of Food and Agriculture 2023: Revealing the true cost of food to transform agrifood systems</strong>. Roma: FAO, 2023.</li>
+                    <li>BERCHIALLI, T. T.; VAZQUEZ, J. A.; VIEIRA, P. F. <strong>Nutrição de Ruminantes e Emissões de Metano na Pecuária Tropical Brasileira</strong>. Revista Brasileira de Ciência Animal, v. 42, n. 3, p. 511-528, 2021.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p><strong>Projeto desenvolvido por Maria Clara Batista Ferreira</strong></p>
+                <p>Trabalho educacional sobre Agronegócio e Sustentabilidade no Brasil.</p>
+                <p class="footer-note">Conteúdo baseado em pesquisas científicas, dados governamentais e instituições de pesquisa de referência.</p>
+                <p class="footer-copyright">&copy; 2026 Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar para o topo do portal">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"/>
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
